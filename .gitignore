@@ -1,0 +1,5 @@
+.vscode
+/pmc/*
+logs/*
+mining/logs/*
+node_modules/
