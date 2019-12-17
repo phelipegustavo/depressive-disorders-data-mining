@@ -1,7 +1,14 @@
 const redis = require('redis');
 const config = require('../config');
 
-    
+/**
+ * Find or create some cache by key
+ * 
+ * @param {String} key 
+ * @param {Function} cb 
+ * @param {Number} time 
+ * @returns {Object}
+ */
 const findOrCreateCache = async (key, cb, time=60*60*24) => {
 
     try {
@@ -14,6 +21,8 @@ const findOrCreateCache = async (key, cb, time=60*60*24) => {
         } else {
             data = JSON.parse(cached)
         }
+        
+        client.quit();
     
         return data
     } catch (e) {

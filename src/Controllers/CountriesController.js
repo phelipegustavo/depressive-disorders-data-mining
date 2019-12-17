@@ -1,17 +1,7 @@
 const fs = require('fs');
 const Country = require('../Models/Country');
 const { findOrCreate } = require('../Helpers/Criteria');
-
-const readFile = (path) => {
-
-    return new Promise((res, rej) => {
-        const data = fs.readFileSync(path, "utf8")
-        if(data) {
-            return res(data)
-        }
-        return rej(false)
-    })
-}
+const { readFile } = require('../Helpers/File');
 
 module.exports = {
 

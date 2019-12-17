@@ -6,6 +6,12 @@ const { findOrCreateCache } = require('../Helpers/Cache');
 
 module.exports = {
 
+    /**
+     * Save publication
+     * 
+     * @param {*} req 
+     * @param {*} res 
+     */
     async save(req, res) {
 
         try {
@@ -32,6 +38,12 @@ module.exports = {
         }
     },
 
+    /**
+     * List countries with publications count
+     * 
+     * @param {*} req 
+     * @param {*} res 
+     */
     async list(req, res) {
 
         const countries = await Publication.aggregate([
@@ -56,7 +68,6 @@ module.exports = {
                 }
             }).filter(id => id !== null)
         )
-
 
         res.json(items)
     }

@@ -1,5 +1,13 @@
 const log = require('../Utils/Logger');
 
+/**
+ * Find or create model
+ * 
+ * @param {Object} schema 
+ * @param {Object} query 
+ * @param {Object} values 
+ * @returns {Object} 
+ */
 const findOrCreate = async (schema, query, values) => {
     try {
         let data = await schema.findOne(query)
@@ -14,6 +22,14 @@ const findOrCreate = async (schema, query, values) => {
     }
 }
 
+/**
+ * Update or create model
+ * 
+ * @param {Object} schema 
+ * @param {Object} query 
+ * @param {Object} values
+ * @returns {Object} 
+ */
 const updateOrCreate = async (schema, query, values) => {
     try {
      

@@ -6,7 +6,7 @@ const routes = require('./routes');
 const { port, mongo } = require('./config');
 const server = express();
 
-mongoose.connect(`mongodb://${mongo.user}:${mongo.password}@${mongo.host}:${mongo.port}/${mongo.database}`, {
+mongoose.connect(`mongodb://${mongo.user}:${mongo.password}@${mongo.host}:${mongo.port}/admin`, {
     useCreateIndex: true,
     useNewUrlParser: true
 });
