@@ -12,7 +12,7 @@ Queue.process('StartProcess', async (data, done) => {
         done()
         
     } catch(e) {
-        log.error({message: 'StartProcess', error: e.message})
+        log.error({message: 'Populate.StartProcess', error: e.message})
         done(e);
     } 
 

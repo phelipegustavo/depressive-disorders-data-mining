@@ -18,7 +18,7 @@ const findOrCreate = async (schema, query, values) => {
         
         return data
     } catch (e) {
-        log.error({message: 'FindOrCreate', query, error: e.message})
+        log.error({message: 'CRITERIA.findOrCreate', error: e.message, query})
     }
 }
 
@@ -43,7 +43,7 @@ const updateOrCreate = async (schema, query, values) => {
         
         return data
     } catch (e) {
-        log.error({message: 'updateOrCreate', query, error: e.message})
+        log.error({message: 'CRITERIA.updateOrCreate', error: e.message, query})
     }
 }
 

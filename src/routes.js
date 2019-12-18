@@ -5,9 +5,6 @@ const PublicationsController = require('./Controllers/PublicationsController');
 
 const routes = express.Router();
 
-// Process publications
-routes.post('/process', PopulateController.process);
-
 // List all countries
 routes.post('/countries', CountriesController.save);
 

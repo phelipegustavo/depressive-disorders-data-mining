@@ -1,6 +1,13 @@
 const fs = require('fs');
+const Log = require('../Models/Log');
  
-const writeLog = (data, prepend, type) => {
+/**
+ * Write log on file and save on database
+ * 
+ * @param {Object} data 
+ * @param {String} type 
+ */
+const writeLog = (data, type) => {
 
     let date = new Date()
     const filename = date.toISOString().replace(/T.*/,'')
@@ -9,19 +16,47 @@ const writeLog = (data, prepend, type) => {
     const mm = date.getMinutes().toString().padStart(2, '0')
     const ss = date.getSeconds().toString().padStart(2, '0')
 
-    data = `\n\n ${hh}:${mm}:${ss}:: ${prepend} ${JSON.stringify(data)}`;
+    data = `\n\n ${hh}:${mm}:${ss}:: ${type.toUpperCase()}:: ${JSON.stringify(data)}`
 
+    // Write log
     fs.appendFileSync(`logs/${filename}_${type}.log`, data);
+
+    const { message } = data;
+    data.message = undefined;
+
+    // Save log on database
+    Log.save({
+        type,
+        message,
+        data,
+    })
 }
 
+/**
+ * Sucess log
+ * 
+ * @param  {...any} args 
+ */
 const success = (...args) => {
-    writeLog(...args, 'SUCCESS::', 'success');
+    writeLog(...args, 'success');
 }
+
+/**
+ * Errors log
+ * 
+ * @param  {...any} args 
+ */
 const error = (...args) => {
-    writeLog(...args, 'ERROR::', 'error');
+    writeLog(...args, 'error');
 }
+
+/**
+ * Warning log
+ * 
+ * @param  {...any} args 
+ */
 const warning = (...args) => {
-    writeLog(...args, 'WARNING::', 'warning');    
+    writeLog(...args, 'warning');    
 }
 
 const log = {

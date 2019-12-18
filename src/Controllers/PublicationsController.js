@@ -21,7 +21,7 @@ module.exports = {
             
             const country = countries.find(({regex}) => new RegExp(regex, 'i').test(publication.country.trim()))
             if(!country) {
-                log.error({ message: `COUNTRY NOT FOUND ${publication.country}`, pmc: publication.pmc })
+                log.error({ message: `COUNTRY NOT FOUND ${publication.country}`, pmc: publication.pmc, req: req.body })
                 publication.country = null
             } else {
                 publication.country = country._id
@@ -29,12 +29,12 @@ module.exports = {
 
             publication = await updateOrCreate(Publication, {pmc: parseInt(publication.pmc)}, publication)
 
-            res.json({ message: 'OK', data: publication });
+            res.json({ message: 'SAVE SUCCESSFUL', data: publication });
 
         } catch (e) {
 
-            log.error({ message: 'PublicationController.save', data: e.message})
-            res.json({ message: 'ERROR', data: e.message })
+            log.error({ message: 'FAIL TO SAVE PUBLICATION', error: e.message, req: req.body})
+            res.json({ message: 'SAVE FAILURE', error: e.message })
         }
     },
 

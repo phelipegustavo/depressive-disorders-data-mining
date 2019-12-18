@@ -3,6 +3,11 @@ const log = require('../Utils/Logger');
 
 module.exports = {
 
+    /**
+     * 
+     * @param {*} req 
+     * @param {*} res 
+     */
     async process(req, res) {
         
         const term = 'depressive';
