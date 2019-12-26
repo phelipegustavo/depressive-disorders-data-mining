@@ -16,20 +16,20 @@ const writeLog = (data, type) => {
     const mm = date.getMinutes().toString().padStart(2, '0')
     const ss = date.getSeconds().toString().padStart(2, '0')
 
-    data = `\n\n ${hh}:${mm}:${ss}:: ${type.toUpperCase()}:: ${JSON.stringify(data)}`
+    const str = `\n\n ${hh}:${mm}:${ss}:: ${type.toUpperCase()}:: ${JSON.stringify(data)}`
 
     // Write log
-    fs.appendFileSync(`logs/${filename}_${type}.log`, data);
+    fs.appendFileSync(`logs/${filename}_${type}.log`, str);
 
-    const { message } = data;
+    const { message }  = data;
     data.message = undefined;
 
     // Save log on database
-    Log.save({
+    Log.create({
         type,
         message,
         data,
-    })
+    });
 }
 
 /**

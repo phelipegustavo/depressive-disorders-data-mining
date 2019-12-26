@@ -50,5 +50,24 @@ module.exports = {
         });
 
         res.json({message: 'ok'});
+    },
+
+    /**
+     * List all countries
+     * 
+     * @param {*} req 
+     * @param {*} res 
+     */
+    async list(req, res) {
+        try {
+
+            countries = await Country.find().select('_id name regex');
+
+            res.json({message: 'ok', countries})
+            
+        } catch (error) {
+            console.log(error)
+            res.json({error})
+        }
     }
 }

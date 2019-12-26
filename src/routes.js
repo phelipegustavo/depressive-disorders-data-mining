@@ -5,8 +5,11 @@ const PublicationsController = require('./Controllers/PublicationsController');
 
 const routes = express.Router();
 
-// List all countries
+// Save countries
 routes.post('/countries', CountriesController.save);
+
+// List all countries
+routes.get('/countries', CountriesController.list);
 
 // List all coutries with publications count
 routes.get('/publications', PublicationsController.list);

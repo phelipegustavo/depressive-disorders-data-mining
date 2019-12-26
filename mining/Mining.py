@@ -97,7 +97,7 @@ class Mining:
 			}
 
 			try:
-				parser = Parser('/../pmc/xml/depressive/' + id + '.xml')
+				parser = Parser('/../' + self.db + '/xml/depressive/' + id + '.xml')
 				parser.parse()
 			except:
 				os.remove(self.path + '/' + id + '.xml')
