@@ -1,7 +1,5 @@
 from Mining import Mining
 from Parser import Parser
-import os
-from utils import *
 
 mining = Mining('depressive', 'pmc')
 mining.start()

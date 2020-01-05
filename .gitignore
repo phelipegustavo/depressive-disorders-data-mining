@@ -1,6 +1,6 @@
 .vscode
 /pmc/*
 logs/*
-mining/__pycache__/*
+mining/**/__pycache__/*
 mining/logs/*
 node_modules/

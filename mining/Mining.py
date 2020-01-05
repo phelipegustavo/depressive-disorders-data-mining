@@ -1,12 +1,14 @@
 import json
 import subprocess
 import requests
-from Parser import Parser
+import urllib.request
 import math
-from utils import *
-import os.path
-from os import path
 import time 
+import os
+
+from Config import *
+from Utils import File
+from Parser import Parser
 
 class Mining:
 
@@ -26,7 +28,7 @@ class Mining:
 	def start(self):
 		self.search()
 		self.paginate()
-
+		print('STARTING....')
 		for page in range(1, self.pagination['total']):
 			idlist = self.search()
 			if(idlist):
@@ -39,14 +41,17 @@ class Mining:
 
 	def fetch(self, id, retries=0):
 		try:
-			self.path = createPath(self.db + '/XML/' + self.term)
-			url = ENTREZ + '/eutils/efetch.fcgi?db=' + self.db + '&id=' + id
+			self.path = File.createPath(self.db + '/XML/' + self.term)
+			url = ENTREZ + '/eutils/efetch.fcgi?rettype=fasta&retmode=xml&db=' + self.db + '&id=' + id
 			filename = self.path + '/' + id + '.xml'
-			if(not path.exists(filename)):
-				res = requests.get(url)
-				file = open(filename, 'wb')
-				file.write(res.content)
-				file.close()
+			if(not os.path.exists(filename)):
+				subprocess.call([
+					'curl',
+					'-X',
+					'GET',
+					'-o', filename,
+					url
+				])
 			self.saveItem(id)
 		except:
 			if(retries < 5):
@@ -103,9 +108,9 @@ class Mining:
 				os.remove(self.path + '/' + id + '.xml')
 				return
 				
-			r = requests.post(url = API + '/publications', data = json.dumps({'publication': parser.dict}), headers = headers) 
+			requests.post(url = API + '/publications', data = json.dumps({'publication': parser.dict}), headers = headers) 
 
-			cls()
+			File.cls()
 			total = self.pagination['current']/self.pagination['count'] * 100
 			print('\t<<< MINING >>>')
 			print('\tTOTAL:', self.pagination['count'])

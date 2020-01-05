@@ -1,36 +1,70 @@
 import json
-from utils import *
+import Utils.Parser as utils
 import pprint
 import xmltodict
 import os
-import xml.etree as ET
 
-
+'''
+    Parser class contais methods to parse some XML publication to Python dict
+'''
 class Parser:
 
     def __init__(self, path):
         self.path = os.path.dirname(__file__) + path
         self.dict = {}
 
-
+    '''
+        Open and read XML file
+    '''
     def openFile(self):
         handle = open(self.path, 'r')
         self.content = handle.read()
-        self.tree = read_xml(self.path, False)
+        self.tree = utils.read_xml(self.path, False)
         handle.close()
     
+    '''
+        Parse to JSON
+    '''
     def toJson(self):
         return json.dumps(self.dict)
         
+    '''
+        Parse and set dict attribute
+    '''
     def parse(self):
+
         self.openFile()
 
         # Title
         tree_title = self.tree.find('.//title-group/article-title')
-        title = get_iter_tex(tree_title)
+        title = utils.get_iter_tex(tree_title)
         self.dict['title'] = title
 
-        # Abstract
+        # Article meta
+        self.dict['pmid'] = utils.get_text(self.tree, './/article-meta/article-id/[@pub-id-type="pmid"]')
+        self.dict['pmc'] = utils.get_text(self.tree, './/article-meta/article-id/[@pub-id-type="pmc"]')
+        self.dict['doi'] = utils.get_text(self.tree, './/article-meta/article-id/[@pub-id-type="doi"]')
+        self.dict['publisherId'] = utils.get_text(self.tree, './/article-meta/article-id/[@pub-id-type="publisher-id"]')
+        # Keywords
+        self.dict['keywords'] = utils.get_text_array(self.tree, './/article-meta/*/kwd')
+        # ElocationId
+        self.dict['elocationId'] = utils.get_text(self.tree, './/journal-meta/elocationId')
+        # Categories
+        self.dict['categories'] = utils.get_text_array(self.tree, './/article-meta/article-categories/*/subj-group/subject')
+
+        self.getAbstract()
+        self.getJournal()
+        self.getDate()
+        self.getContributors()
+        self.getAffiliations() 
+        self.getCountry()       
+        
+        return self
+
+    '''
+        Get Abstract Data
+    '''
+    def getAbstract(self):
         try:
             abstracts = list()
             abstract_tree = self.tree.findall('.//abstract')
@@ -43,21 +77,21 @@ class Parser:
             abstract = ''
         self.dict['abstract'] = abstract
 
-        # Journal
+    '''
+        Get Journal Data
+    '''
+    def getJournal(self):
         journal = {}
-        journal['title'] = get_text(self.tree, './/journal-title')
-        journal['nlmTa'] = get_text(self.tree, './/journal-meta/journal-id/[@journal-id-type="nlm-ta"]')
-        journal['isoAbbrev'] = get_text(self.tree, './/journal-meta/journal-id/[@journal-id-type="iso-abbrev"]')
-        journal['issn'] = get_atrib_dic(self.tree, './/journal-meta/issn', 'pub-type')
-        journal['publisher'] = get_iter_tex_dic(self.tree, './/journal-meta/publisher/publisher-name')
+        journal['title'] = utils.get_text(self.tree, './/journal-title')
+        journal['nlmTa'] = utils.get_text(self.tree, './/journal-meta/journal-id/[@journal-id-type="nlm-ta"]')
+        journal['isoAbbrev'] = utils.get_text(self.tree, './/journal-meta/journal-id/[@journal-id-type="iso-abbrev"]')
+        journal['issn'] = utils.get_atrib_dic(self.tree, './/journal-meta/issn', 'pub-type')
+        journal['publisher'] = utils.get_iter_tex_dic(self.tree, './/journal-meta/publisher/publisher-name')
         self.dict['journal'] = journal
-
-        self.dict['pmid'] = get_text(self.tree, './/article-meta/article-id/[@pub-id-type="pmid"]')
-        self.dict['pmc'] = get_text(self.tree, './/article-meta/article-id/[@pub-id-type="pmc"]')
-        self.dict['doi'] = get_text(self.tree, './/article-meta/article-id/[@pub-id-type="doi"]')
-        self.dict['publisherId'] = get_text(self.tree, './/article-meta/article-id/[@pub-id-type="publisher-id"]')
-        
-        # pubDate
+    '''
+        Get Publication Date
+    '''
+    def getDate(self):
         tree = self.tree.findall('.//article-meta/pub-date')
         pubDate = []
         if tree is not None:
@@ -70,14 +104,10 @@ class Parser:
                 pubDate.append(date)
         self.dict['pubDate'] = pubDate
 
-        # keywords
-        self.dict['keywords'] = get_text_array(self.tree, './/article-meta/*/kwd')
-        
-        # elocationId
-        self.dict['elocationId'] = get_text(self.tree, './/journal-meta/elocationId')
-
-
-        # contributors
+    '''
+        Get Contributors data
+    '''
+    def getContributors(self):
         tree = self.tree.findall('.//contrib-group/contrib/[@contrib-type]')
         contributors = []
         if tree is not None:
@@ -85,11 +115,14 @@ class Parser:
                 if (e.text is not None):
                     contrib = {}
                     contrib['type'] = e.attrib['contrib-type']
-                    contrib['name'] = get_text(e, './/name/*', ', ')
+                    contrib['name'] = utils.get_text(e, './/name/*', ', ')
                     contributors.append(contrib)
         self.dict['contributors'] = contributors
 
-        # affiliations
+    '''
+        Get Affiliations data
+    '''
+    def getAffiliations(self):
         tree = self.tree.findall('.//aff')
         affiliations = []
         if tree is not None:
@@ -101,9 +134,9 @@ class Parser:
                 except:
                     pass
 
-                aff['name'] = get_text(e, './/institution')
-                aff['address'] = get_text(e, './/addr-line')
-                aff['country'] = get_text(e, './/country')
+                aff['name'] = utils.get_text(e, './/institution')
+                aff['address'] = utils.get_text(e, './/addr-line')
+                aff['country'] = utils.get_text(e, './/country')
                 
                 try:
                     if not aff['name']:
@@ -126,14 +159,14 @@ class Parser:
                 affiliations.append(aff)
         self.dict['affiliations'] = affiliations
 
+
+    '''
+        Get Country data
+    '''
+    def getCountry(self):
         try:
             self.dict['country'] = self.dict['affiliations'][0]['country']
         except:
             self.dict['country'] = ''
         
         self.dict['country'] = self.dict['country'].replace('.', '')
-
-        # categories
-        self.dict['categories'] = get_text_array(self.tree, './/article-meta/article-categories/*/subj-group/subject')
-        
-        return self
