@@ -6,7 +6,7 @@ import math
 import time 
 import os
 
-from Config import *
+from Utils.Config import *
 from Utils import File
 from Parser import Parser
 
