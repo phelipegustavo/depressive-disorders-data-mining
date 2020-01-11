@@ -16,19 +16,10 @@ module.exports = {
 
         try {
             let { publication } = req.body
-            
-            countries = await findOrCreateCache('countries_list', Country.find({}))
-            
-            const country = countries.find(({regex}) => new RegExp(regex, 'i').test(publication.country.trim()))
-            if(!country) {
-                log.error({ message: `COUNTRY NOT FOUND ${publication.country}`, pmc: publication.pmc, req: req.body })
-                publication.country = null
-            } else {
-                publication.country = country._id
-            }
 
             publication = await updateOrCreate(Publication, {pmc: parseInt(publication.pmc)}, publication)
 
+            console.log(publication.country);
             res.json({ message: 'SAVE SUCCESSFUL', data: publication });
 
         } catch (e) {

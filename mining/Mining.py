@@ -28,7 +28,7 @@ class Mining:
 	def start(self):
 		self.search()
 		self.paginate()
-		print('STARTING....')
+		print('STARTING...')
 		for page in range(1, self.pagination['total']):
 			idlist = self.search()
 			if(idlist):
@@ -42,8 +42,8 @@ class Mining:
 	def fetch(self, id, retries=0):
 		try:
 			self.path = File.createPath(self.db + '/XML/' + self.term)
-			url = ENTREZ + '/eutils/efetch.fcgi?rettype=fasta&retmode=xml&db=' + self.db + '&id=' + id
-			filename = self.path + '/' + id + '.xml'
+			url = f'{ENTREZ}/eutils/efetch.fcgi?rettype=fasta&retmode=xml&db={self.db}&id={id}'
+			filename = f'{self.path}/{id}.xml'
 			if(not os.path.exists(filename)):
 				subprocess.call([
 					'curl',
@@ -55,7 +55,7 @@ class Mining:
 			self.saveItem(id)
 		except:
 			if(retries < 5):
-				print('\t FETCH AGAIN: (', retries, ') ', id)
+				print(f'\t FETCH AGAIN: ({retries}), ID > {id}')
 				time.sleep(100)
 				return self.fetch(id, retries+1)
 			
@@ -69,7 +69,7 @@ class Mining:
 				'retmax': self.pagination['retmax'],
 				'retstart': self.pagination['retstart'],
 			}
-			res = requests.get(ENTREZ + '/eutils/esearch.fcgi' , params=params)
+			res = requests.get(f'{ENTREZ}/eutils/esearch.fcgi', params=params)
 			result = res.json()['esearchresult']
 			if('idlist' in result.keys()):
 				idlist = result['idlist']    
@@ -77,7 +77,7 @@ class Mining:
 			return idlist
 		except:
 			if(retries < 5):
-				print('\t SEARCH AGAIN: (', retries, ') ', self.pagination['page'])
+				print(f'\t SEARCH AGAIN: ({retries}), PAGE > {self.pagination["page"]}')
 				time.sleep(100)
 				return self.search(retries+1)
 			
@@ -88,7 +88,7 @@ class Mining:
 	def nextPage(self):
 		self.pagination['page'] += 1
 		self.pagination['retstart'] += self.pagination['retmax']
-		print('NEXT PAGE >>', self.pagination['page'])
+		print(f'NEXT PAGE >> {self.pagination["page"]}')
 
 	def saveItem(self, id, retries=0):	
 		try:
@@ -102,13 +102,15 @@ class Mining:
 			}
 
 			try:
-				parser = Parser('/../' + self.db + '/xml/depressive/' + id + '.xml')
+				print('PARSING...')
+				parser = Parser(f'/../{self.db}/xml/depressive/{id}.xml')
 				parser.parse()
-			except:
-				os.remove(self.path + '/' + id + '.xml')
+			except Exception as e:
+				print(str(e))
+				os.remove(f'{self.path}/{id}.xml')
 				return
 				
-			requests.post(url = API + '/publications', data = json.dumps({'publication': parser.dict}), headers = headers) 
+			requests.post(url = f'{API}/publications', data = json.dumps({'publication': parser.dict}), headers = headers) 
 
 			File.cls()
 			total = self.pagination['current']/self.pagination['count'] * 100
@@ -121,7 +123,7 @@ class Mining:
 			self.pagination['current'] += 1
 		except:
 			if(retries < 5):
-				print('\t SAVE AGAIN: (', retries+1, ') ', id)
+				print(f'\t SAVE AGAIN: ({retries+1} ID > id')
 				time.sleep(100)
 				self.saveItem(id, retries+1)
 			return

@@ -1,9 +1,11 @@
 import json
-import Utils.Parser as utils
 import pprint
 import xmltodict
 import os
 
+
+from Utils.Country import Country
+import Utils.Parser as utils
 '''
     Parser class contais methods to parse some XML publication to Python dict
 '''
@@ -164,9 +166,5 @@ class Parser:
         Get Country data
     '''
     def getCountry(self):
-        try:
-            self.dict['country'] = self.dict['affiliations'][0]['country']
-        except:
-            self.dict['country'] = ''
-        
-        self.dict['country'] = self.dict['country'].replace('.', '')
+        helper = Country(self.dict)
+        self.dict['country'] = helper.findCountry()
