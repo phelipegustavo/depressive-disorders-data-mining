@@ -18,12 +18,13 @@ module.exports = {
             let { publication } = req.body
 
             publication = await updateOrCreate(Publication, {pmc: parseInt(publication.pmc)}, publication)
-
-            console.log(publication.country);
+            console.log(publication._id,  ' :: ', publication.country);
+            
             res.json({ message: 'SAVE SUCCESSFUL', data: publication });
 
         } catch (e) {
 
+            console.log('FAIL');
             log.error({ message: 'FAIL TO SAVE PUBLICATION', error: e.message, req: req.body})
             res.json({ message: 'SAVE FAILURE', error: e.message })
         }

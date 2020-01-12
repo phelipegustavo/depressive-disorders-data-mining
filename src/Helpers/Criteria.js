@@ -36,7 +36,7 @@ const updateOrCreate = async (schema, query, values) => {
         let data = await schema.findOne(query)
         
         if(data) {
-            data = await schema.updateOne({ _id: data._id }, { $set : values })
+            data = await schema.findByIdAndUpdate(data._id, { $set : values })
         } else {
             data = await schema.create(values)
         }

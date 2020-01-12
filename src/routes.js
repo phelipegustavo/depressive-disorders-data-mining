@@ -2,6 +2,7 @@ const express = require('express');
 const PopulateController = require('./Controllers/PopulateController');
 const CountriesController = require('./Controllers/CountriesController');
 const PublicationsController = require('./Controllers/PublicationsController');
+const LogController = require('./Controllers/LogController');
 
 const routes = express.Router();
 
@@ -16,5 +17,8 @@ routes.get('/publications', PublicationsController.list);
 
 // Save publication
 routes.post('/publications', PublicationsController.save);
+
+// Save log
+routes.post('/logs', LogController.save);
 
 module.exports = routes;

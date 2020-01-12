@@ -48,11 +48,12 @@ class Country:
             self.countries = self.fromApi()
         return self.countries
     
-    def getId(self, country):
+    def getId(self, country, field="regex"):
         try:
             self.getCountries()
+            # Find by regex
             for c in self.countries:
-                reg = re.compile(c['regex'], re.MULTILINE | re.IGNORECASE)
+                reg = re.compile(c[field], re.MULTILINE | re.IGNORECASE)
                 match = reg.match(country)
                 if (match):
                     return c['_id']
@@ -64,9 +65,57 @@ class Country:
     def findCountry(self):
         try:
             # Get country of first afiliation
-           country = self.publication['affiliations'][0]['country']
+            countryName = self.publication['affiliations'][0]['country']
+            countryId = self.getId(countryName.replace('.', '').replace(' ', '').replace(';', ''))
         except:
             # Tag Country not found
-            country = ''
-        print(f'COUNTRY {country}')
-        return self.getId(country.replace('.', ''))
+            countryName = ''
+
+        if(not countryName):
+            # Report cannot find country on publication
+            self.reportNotFound('COUNTRY NOT FOUND')
+
+        elif(not countryId):
+            # Search on Nominatim API
+            country = self.findNominatim(countryName)
+            if(country):
+                countryId = self.getId(country['country_code'], field="code")
+
+        return countryId
+
+    def findNominatim(self, countryName):
+        params = {
+            'q': countryName,
+            'format': 'jsonv2',
+            'addressdetails': 1,
+        }
+        headers = {
+            'Content-type': 'application/json',
+            'Accept': 'application/json'
+        }
+
+        req = requests.get('https://nominatim.openstreetmap.org/search', params=params, headers=headers)
+        res = req.json()
+
+        try:
+            found = res[0]
+        except:
+            self.reportNotFound(f'NOMINATIN CANOT FOUND {countryName} >> RESPONSE :: {json.dumps(res)}')
+            return False
+
+        return found['address']
+
+    def reportNotFound(self, countryName):
+        data = {
+            'type': 'country',
+            'message': countryName, 
+            'data': self.publication
+        }
+        headers = {
+            'Content-type': 'application/json',
+            'Accept': 'application/json'
+        }
+
+        req = requests.post(url = f'{API}/logs', data = json.dumps(data), headers = headers) 
+
+        return req

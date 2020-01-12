@@ -105,14 +105,16 @@ class Mining:
 				print('PARSING...')
 				parser = Parser(f'/../{self.db}/xml/depressive/{id}.xml')
 				parser.parse()
+				data['publication'] = parser.dict
 			except Exception as e:
 				print(str(e))
 				os.remove(f'{self.path}/{id}.xml')
 				return
-				
-			requests.post(url = f'{API}/publications', data = json.dumps({'publication': parser.dict}), headers = headers) 
+			
+			if(data['publication']):
+				requests.post(url = f'{API}/publications', data = json.dumps(data), headers = headers) 
 
-			File.cls()
+			# File.cls()
 			total = self.pagination['current']/self.pagination['count'] * 100
 			print('\t<<< MINING >>>')
 			print('\tTOTAL:', self.pagination['count'])

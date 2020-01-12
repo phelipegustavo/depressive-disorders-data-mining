@@ -61,7 +61,7 @@ module.exports = {
     async list(req, res) {
         try {
 
-            countries = await Country.find().select('_id name regex');
+            countries = await Country.find().select('_id name regex code');
 
             res.json({message: 'ok', countries})
             
