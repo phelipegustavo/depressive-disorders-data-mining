@@ -25,11 +25,13 @@ const writeLog = (data, type) => {
     data.message = undefined;
 
     // Save log on database
+    /*
     Log.create({
         type,
         message,
         data,
     });
+    */
 }
 
 /**
