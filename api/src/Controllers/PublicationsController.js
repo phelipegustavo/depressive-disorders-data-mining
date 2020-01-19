@@ -52,6 +52,7 @@ module.exports = {
                 const country = await Country.findOne({_id})
                 if(country) {
                     return {
+                        _id: country._id,
                         name: country.name,
                         lat: country.lat,
                         lng: country.lng,
@@ -62,5 +63,29 @@ module.exports = {
         )
 
         res.json(items)
+    },
+
+    /**
+     * List publications by country id
+     * 
+     * @param {*} req 
+     * @param {*} res 
+     */
+    async publications(req, res) {
+
+        const { country } = req.params;
+        let { page, perPage, search } = req.query;
+
+        page = page ? Number(page) : 1;
+        perPage = perPage ? Number(perPage) : 10;
+        search = perPage ? search : '';
+
+        const publications = await Publication.find({ country, title: search })
+            .skip((page - 1) * perPage)
+            .limit(perPage)
+            .select('_id pmc title affiliations')
+            .exec()
+
+        res.json(publications)
     }
 }

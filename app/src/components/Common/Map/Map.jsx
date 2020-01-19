@@ -13,31 +13,33 @@ import './Map.css';
 const { compose, withStateHandlers } = require("recompose");
 
 const MapWithAMarker = compose(
-	withStateHandlers(() => ({
-		isOpen: false,
-		zoom: 2,
+	withStateHandlers((props) => ({
+        options: {
+            minZoom: 2,
+            maxZoom: 6,
+        },
+        zoom: 2,
 		center: {
 			lat: 0,
 			lng: 0
-		},
+        },
 	}), {
-		onToggleOpen: () => (index=false) => ({
-			isOpen: index
-		})
 	}),
 	withScriptjs,
 	withGoogleMap
 	)(props => (
 	<GoogleMap
+        options={props.options}
 		defaultZoom={props.zoom}
 		defaultCenter={props.center}>
-		{props.markers.map(({lat, lng, count, name}, i) => (
+		{props.markers.map(({lat, lng, count, name, _id}) => (
 			<Marker 
-				key={i} 
+				key={_id} 
 				position={{ lat, lng }} 
 				label={{fontSize: '10px', fontWeight: '600', color: '#fff', text: count.toString()}} 
-				onClick={() => props.onToggleOpen(i)}>
-					{props.isOpen === i && <InfoWindow onCloseClick={props.onToggleOpen}>
+				onClick={() => props.select({count, name, _id})}>
+					{props.country && props.country._id === _id && 
+                    <InfoWindow onCloseClick={props.select}>
 						<span>{ name } ({count})</span>
 					</InfoWindow>}
 			</Marker>
@@ -82,6 +84,8 @@ export default class Map extends Component {
                 zoom={this.zoom} 
                 center={this.center} 
                 markers={this.state.markers} 
+                select={this.props.select}
+                country={this.props.country}
             />
         )
     }

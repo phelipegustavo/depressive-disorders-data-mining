@@ -15,6 +15,7 @@ import {
 
 import Map from '../Common/Map/Map';
 import Menu from './Menu';
+import Publications from './Publications';
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -53,7 +54,9 @@ export default class Dashboard extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            menu: false
+            menu: false,
+            publications: false,
+            country: null,
         }
     }
 
@@ -61,13 +64,24 @@ export default class Dashboard extends Component {
         const menu = !this.state.menu;
         this.setState({ menu })
     }
+
+    togglePublications() {
+        const publications = !this.state.publications;
+        this.setState({ publications })
+    }
+
+    selectCountry(country=false) {
+        this.setState({ country })
+        this.setState({ publications: !!country })
+    }
     
     render() {
         return (
             <div style={{height: '100vh', display: 'flex', flexDirection: 'column'}}>
                 <TopBar toggleMenu={this.toggleMenu.bind(this)} />
-                <Map />
+                <Map select={this.selectCountry.bind(this)} country={this.state.country}/>
                 <Menu open={this.state.menu} toggleMenu={this.toggleMenu.bind(this)} />
+                <Publications open={this.state.publications} country={this.state.country} toggleMenu={this.togglePublications.bind(this)} />
             </div>
         )
     }

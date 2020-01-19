@@ -63,6 +63,7 @@ class Country:
             return None
 
     def findCountry(self):
+        countryId = None
         try:
             # Get country of first afiliation
             countryName = self.publication['affiliations'][0]['country']

@@ -1,5 +1,4 @@
 const express = require('express');
-const PopulateController = require('./Controllers/PopulateController');
 const CountriesController = require('./Controllers/CountriesController');
 const PublicationsController = require('./Controllers/PublicationsController');
 const LogController = require('./Controllers/LogController');
@@ -14,6 +13,9 @@ routes.get('/countries', CountriesController.list);
 
 // List all coutries with publications count
 routes.get('/publications', PublicationsController.list);
+
+// List all publictions of country
+routes.get('/publications/:country', PublicationsController.publications);
 
 // Save publication
 routes.post('/publications', PublicationsController.save);
