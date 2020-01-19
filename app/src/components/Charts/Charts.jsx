@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 
+import { 
+    Card,
+    Typography, 
+    CardContent,
+} from '@material-ui/core';
+
+import Mining from './Mining';
 export default class Charts extends Component {
 
     constructor(props) {
@@ -10,7 +17,12 @@ export default class Charts extends Component {
 
     render() {
         return (
-            <div>Charts</div>
+            <Card>
+                <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">Charts</Typography>
+                    <Mining />
+                </CardContent>
+            </Card>
         )
     }
 }
