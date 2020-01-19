@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+import { useTranslation  } from 'react-i18next';
+
 import {    
     Drawer,
     List,
@@ -9,29 +12,36 @@ import {
 } from '@material-ui/core';
 
 import {
-    Place
+    Place,
+    PieChart,
 } from '@material-ui/icons';
 
 const items = [
     {
-        href: () => '/mapa', 
-        text: 'Mapa', 
+        href: '/', 
+        text: 'Map', 
         icon: <Place/> 
+    },
+    {
+        href: '/charts', 
+        text: 'Charts', 
+        icon: <PieChart/> 
     }
 ];
 
-
 export default function Menu(props) {
+
+    const { t } = useTranslation();
 
     return (
         <Drawer anchor="left" open={props.open} onClose={props.toggleMenu}>
             <List component="nav" aria-label="main mailbox folders" style={{width: '340px'}}>
                 { items.map((item, index) => (
-                    <ListItem key={index} button onClick={item.action}>
+                    <ListItem key={index} button component={Link} to={item.href} onClick={props.toggleMenu}>
                         <ListItemIcon>
                             { item.icon }
                         </ListItemIcon>
-                    <ListItemText primary={item.text} />
+                    <ListItemText primary={t(item.text)} />
                     </ListItem>
                 )) }
             </List>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { api, headers } from '../../constants';
+
 import {    
     Drawer,
     List,
@@ -35,12 +37,11 @@ export default class Publications extends Component {
 
     async getPublications() {
         this.setState({loading: true})
-        const res = await fetch(`http://localhost:5555/publications/${this.props.country._id}?page=${this.state.page}&perPage=${this.state.perPage}`, {
-            method: 'GET',
-            headers: { 'Content-Type' : 'application/json' },
-            mode: 'cors',
-            cache: 'default',
+        const url = api(`publications/${this.props.country._id}`, {
+            page: this.state.page,
+            perPage: this.state.perPage
         })
+        const res = await fetch(url, headers)
         const items = await res.json();
         let publications = this.state.publications;
         publications = publications.concat(items)
