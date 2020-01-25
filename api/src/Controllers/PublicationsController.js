@@ -39,14 +39,12 @@ module.exports = {
     async list(req, res) {
 
         const countries = await Publication.aggregate([
-            { 
-                $group: { 
-                    _id: "$country", 
-                    count: { $sum: 1 },
-                } 
-            } 
+            { $match: { country: { $ne: null } } },
+            { $group: { _id: "$country", count: { $sum: 1 } } },
+            { $sort: { count: -1 } },
         ]).exec()
 
+        const total = await Publication.find({ country: { $ne: null } }).count();
         const items = await Promise.all(
             countries.map(async ({_id, count}) => {
                 const country = await Country.findOne({_id})
@@ -56,7 +54,9 @@ module.exports = {
                         name: country.name,
                         lat: country.lat,
                         lng: country.lng,
+                        code: country.code.toLowerCase(),
                         count,
+                        percentage: (count/total*100).toFixed(2),
                     }
                 }
             }).filter(id => id !== null)
@@ -78,9 +78,8 @@ module.exports = {
 
         page = page ? Number(page) : 1;
         perPage = perPage ? Number(perPage) : 10;
-        search = perPage ? search : '';
 
-        const publications = await Publication.find({ country, title: search })
+        const publications = await Publication.find({ country })
             .skip((page - 1) * perPage)
             .limit(perPage)
             .select('_id pmc title affiliations')

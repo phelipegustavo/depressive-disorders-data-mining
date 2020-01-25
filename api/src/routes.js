@@ -1,6 +1,7 @@
 const express = require('express');
 const CountriesController = require('./Controllers/CountriesController');
 const PublicationsController = require('./Controllers/PublicationsController');
+const ChartController = require('./Controllers/ChartController');
 const LogController = require('./Controllers/LogController');
 
 const routes = express.Router();
@@ -19,6 +20,9 @@ routes.get('/publications/:country', PublicationsController.publications);
 
 // Save publication
 routes.post('/publications', PublicationsController.save);
+
+// Charts
+routes.get('/charts/list', ChartController.list);
 
 // Save log
 routes.post('/logs', LogController.save);

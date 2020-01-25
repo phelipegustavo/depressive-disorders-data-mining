@@ -5,7 +5,7 @@ import {
     PieChart, 
     Pie, 
     Sector, 
-    Cell 
+    Cell,
 } from 'recharts';
 
 import {
@@ -63,33 +63,30 @@ const renderActiveShape = (props) => {
 
 export default class Found extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            activeIndex: 0,
-            data: [],
-        };
+    state = {
+        activeIndex: 0,
+        data: [],
     }
 
-    componentDidMount() {
-        this.getData();
+    static getDerivedStateFromProps(props, state) {
+        if (props.data) {
+            return {
+                data: props.data
+            };
+        }
+        return null;
     }
 
     onPieEnter = (data, index) => {
         this.setState({ activeIndex: index });
-    };
-
-    async getData() {
-        const url = api('charts/mining')
-        const res = await fetch(url, headers);
-        const data = await res.json();
-        this.setState({ data });
-    }
+    };  
 
     render() {
         return (
             <React.Fragment>
-                <Typography gutterBottom variant="h5" component="h2">{<Trans i18nKey="Identified countries" />}</Typography>
+                <Typography gutterBottom variant="h5" component="h2">
+                    <Trans i18nKey="Defined Country" />
+                </Typography>
                 <PieChart width={900} height={400}>
                     <Pie
                         activeIndex={this.state.activeIndex}

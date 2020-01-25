@@ -34,11 +34,10 @@ export default class Map extends Component {
     async getMarkers() {
         const url = api('publications')
         const res = await fetch(url, headers)
-        const items = await res.json();
-        if(items) {
-            const markers = items.filter(item => item);
+        const markers = await res.json();
+        if(markers) {
             this.setState({ markers });
-        }
+        } 
     }
 
     render() {
