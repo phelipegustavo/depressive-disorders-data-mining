@@ -11,14 +11,14 @@ export default class Map extends Component {
     constructor(props) {
         super(props);
         this.state = { 
-            markers: [],
+            countries: [],
             country: false,
             publications: false,
         };
     }
 
     componentDidMount() {
-        this.getMarkers();
+        this.getCountries();
     }
 
     togglePublications() {
@@ -26,17 +26,17 @@ export default class Map extends Component {
         this.setState({ publications })
     }
 
-    selectCountry(country=false) {
+    selectCountry(e, country=false) {
         this.setState({ country })
         this.setState({ publications: !!country })
     }
 
-    async getMarkers() {
+    async getCountries() {
         const url = api('publications')
         const res = await fetch(url, headers)
-        const markers = await res.json();
-        if(markers) {
-            this.setState({ markers });
+        const countries = await res.json();
+        if(countries) {
+            this.setState({ countries });
         } 
     }
 
@@ -48,11 +48,17 @@ export default class Map extends Component {
                     loadingElement={<div style={{ display: 'flex', flex: 1 }} />}
                     containerElement={<div style={{ display: 'flex', flex: 1 }} />}
                     mapElement={<div style={{ display: 'flex', flex: 1  }} />}
-                    markers={this.state.markers} 
+                    markers={this.state.countries} 
                     select={this.selectCountry.bind(this)}
                     country={this.state.country}
                 />
-                <Publications open={this.state.publications} country={this.state.country} toggleMenu={this.togglePublications.bind(this)} />
+                <Publications 
+                    open={this.state.publications} 
+                    country={this.state.country} 
+                    countries={this.state.countries} 
+                    toggleMenu={this.togglePublications.bind(this)} 
+                    selectCountry={this.selectCountry.bind(this)}
+                />
             </React.Fragment>
         )
     }

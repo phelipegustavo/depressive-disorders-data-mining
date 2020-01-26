@@ -8,7 +8,6 @@ import {
     Toolbar,
     IconButton,
     Typography,
-    Button,
 } from '@material-ui/core';
 
 import {
@@ -42,7 +41,6 @@ export default function TopBar(props) {
                 <Typography variant="h6" className={classes.title}>
                     {t('Depression-related articles')}
                 </Typography>
-                <Button color="inherit">Filtros</Button>
             </Toolbar>
         </AppBar>
     );

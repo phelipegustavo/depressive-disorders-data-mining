@@ -3,9 +3,14 @@
         "Depression-related articles": "Artigos relacionados a depressão",
         "Map": "Mapa",
         "Charts": "Gráficos",
-        "Identified countries": "Países Identificados",
+        "Charts desc": "Gráficos",
+        "Identified countries": "Publicações com país identificado",
         "Publications by country": "Publicações por país",
         "Defined Country": "País Definido",
-        "Undefined Country": "País Indefinido"
+        "Undefined Country": "País Indefinido",
+        "Publications Search": "Busca de artigos",
+        "Search by title": "Busque pelo titulo",
+        "Title": "Titulo",
+        "Country": "País"
     }
 }

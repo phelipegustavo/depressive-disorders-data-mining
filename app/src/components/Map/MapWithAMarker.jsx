@@ -31,17 +31,17 @@ export default compose(
         options={props.options}
 		defaultZoom={props.zoom}
 		defaultCenter={props.center}>
-		{props.markers.map(({lat, lng, count, name, _id, code}) => (
+		{props.markers.map(country => (
 			<Marker 
-				key={_id} 
-				position={{ lat, lng }} 
-				label={{fontSize: '10px', fontWeight: '600', color: '#fff', text: count.toString()}} 
-				onClick={() => props.select({count, name, _id})}>
-					{props.country && props.country._id === _id && 
+				key={country._id} 
+				position={{ lat: country.lat, lng: country.lng }} 
+				label={{fontSize: '10px', fontWeight: '600', color: '#fff', text: country.count.toString()}} 
+				onClick={(e) => props.select(e, country)}>
+					{props.country && props.country._id === country._id && 
                     <InfoWindow onCloseClick={props.select}>
 						<span> 
-							{code && <FlagIcon code={code} />}
-							{ name } ({count})
+							{ country.code && <FlagIcon code={country.code} />}
+							{ country.name } ({country.count})
 						</span>
 					</InfoWindow>}
 			</Marker>

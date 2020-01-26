@@ -12,8 +12,6 @@ import {
     Typography
 } from '@material-ui/core';
 
-import { api, headers } from '../../constants';
-
 const renderActiveShape = (props) => {
     const RADIAN = Math.PI / 180;
     const {
@@ -52,7 +50,10 @@ const renderActiveShape = (props) => {
             />
             <path d={`M${sx},${sy}L${mx},${my}L${ex},${ey}`} stroke={fill} fill="none" />
             <circle cx={ex} cy={ey} r={2} fill={fill} stroke="none" />
-            <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fill="#333">{`${payload.name} ${value}`}</text>
+            <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} textAnchor={textAnchor} fill="#333">
+                <Trans i18nKey={payload.name} />
+                ({value})
+            </text>
             <text x={ex + (cos >= 0 ? 1 : -1) * 12} y={ey} dy={18} textAnchor={textAnchor} fill="#999">
                 {`(${(percent * 100).toFixed(2)}%)`}
             </text>
@@ -85,14 +86,14 @@ export default class Found extends Component {
         return (
             <React.Fragment>
                 <Typography gutterBottom variant="h5" component="h2">
-                    <Trans i18nKey="Defined Country" />
+                    <Trans i18nKey="Identified countries" />
                 </Typography>
-                <PieChart width={900} height={400}>
+                <PieChart width={600} height={400}>
                     <Pie
                         activeIndex={this.state.activeIndex}
                         activeShape={renderActiveShape}
                         data={this.state.data}
-                        cx={450}
+                        cx={300}
                         cy={200}
                         innerRadius={60}
                         outerRadius={80}

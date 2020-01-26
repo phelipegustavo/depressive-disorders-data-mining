@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Trans } from 'react-i18next';
 
 import { 
     Card,
@@ -9,6 +8,8 @@ import {
 } from '@material-ui/core';
 
 import { api, headers } from '../../constants';
+
+import { Trans } from 'react-i18next';
 
 import Mining from './Mining';
 import Countries from './Countries';
@@ -38,7 +39,9 @@ export default class Charts extends Component {
     render() {
         return (
             <React.Fragment>
-                <Typography gutterBottom variant="h5" component="h2">Charts</Typography>
+                <Typography gutterBottom variant="h5" component="h2" style={{ padding: '30px'} }>
+                    <Trans i18nKey="Charts desc" />
+                </Typography>
                 <Box 
                     display="flex"
                     alignItems="center"

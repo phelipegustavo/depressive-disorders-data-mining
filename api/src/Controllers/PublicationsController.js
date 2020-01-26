@@ -78,8 +78,13 @@ module.exports = {
 
         page = page ? Number(page) : 1;
         perPage = perPage ? Number(perPage) : 10;
+        search = search ? search : '';
 
-        const publications = await Publication.find({ country })
+        const exp = new RegExp(`.*${search}.*`, 'gi');
+        const publications = await Publication.find({ 
+            country, 
+            title: exp
+        })
             .skip((page - 1) * perPage)
             .limit(perPage)
             .select('_id pmc title affiliations')

@@ -15,7 +15,6 @@ import {
     ListItem,
     ListItemAvatar,
     ListItemText,
-    Avatar,
 } from '@material-ui/core';
 
 import FlagIcon from '../Common/Flag/FlagIcon';
@@ -81,12 +80,12 @@ export default class Countries extends Component {
                         <Tooltip formatter={(value, name, {payload}) => `${name} : ${value} (${payload.percentage})%` }/>
                     </PieChart>
                     <List style={{maxHeight: '350px', overflowY: 'auto'}}>
-                        {this.state.data.map(country => 
+                        {this.state.data.map((country, i) => 
                             <ListItem key={country._id}>
                                 <ListItemAvatar>
                                     <FlagIcon code={country.code} size="2x"/>
                                 </ListItemAvatar>
-                                <ListItemText primary={country.name} secondary={country.count} />
+                                <ListItemText primary={`${i+1}º ${country.name}`} secondary={`${country.count} (${country.percentage}%)`} />
                             </ListItem>
                         )}
                     </List>

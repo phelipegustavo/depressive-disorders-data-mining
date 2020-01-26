@@ -1,0 +1,7 @@
+.flag-icon-ex1 {
+    background-image: url(./images/1x1/xk.svg);
+}
+
+.flag-icon-ex1.flag-icon-squared {
+    background-image: url(./images/1x1/xk.svg);
+}
