@@ -114,7 +114,7 @@ class Mining:
 			if(data['publication']):
 				requests.post(url = f'{API}/publications', data = json.dumps(data), headers = headers) 
 
-			# File.cls()
+			File.cls()
 			total = self.pagination['current']/self.pagination['count'] * 100
 			print('\t<<< MINING >>>')
 			print('\tTOTAL:', self.pagination['count'])

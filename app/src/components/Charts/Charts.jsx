@@ -13,6 +13,7 @@ import { Trans } from 'react-i18next';
 
 import Mining from './Mining';
 import Countries from './Countries';
+import Keywords from './Keywords';
 
 export default class Charts extends Component {
 
@@ -58,6 +59,16 @@ export default class Charts extends Component {
                         <CardContent>
                             <Countries data={this.state.countries}/>
                         </CardContent>
+                    </Card>
+                </Box>
+                <Box 
+                    display="flex"
+                    alignItems="center"
+                    justifyContent="space-around" 
+                    p={1}
+                >
+                    <Card style={{width: '50%', maxHeight: '350px'}}>
+                        <Keywords />
                     </Card>
                 </Box>
             </React.Fragment>

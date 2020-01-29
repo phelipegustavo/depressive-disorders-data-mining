@@ -3,6 +3,7 @@ const CountriesController = require('./Controllers/CountriesController');
 const PublicationsController = require('./Controllers/PublicationsController');
 const ChartController = require('./Controllers/ChartController');
 const LogController = require('./Controllers/LogController');
+const KeywordController = require('./Controllers/KeywordController')
 
 const routes = express.Router();
 
@@ -23,6 +24,12 @@ routes.post('/publications', PublicationsController.save);
 
 // Charts
 routes.get('/charts/list', ChartController.list);
+
+// List all Keywords
+routes.get('/keywords', KeywordController.list);
+
+// List keyword countries
+routes.get('/keywords/:id/countries', KeywordController.countries);
 
 // Save log
 routes.post('/logs', LogController.save);

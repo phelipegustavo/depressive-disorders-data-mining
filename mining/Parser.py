@@ -60,6 +60,8 @@ class Parser:
         self.getContributors()
         self.getAffiliations() 
         self.getCountry()       
+        self.getKwd()
+        print(self.dict['kwds'])
         
         return self
 
@@ -168,3 +170,11 @@ class Parser:
     def getCountry(self):
         helper = Country(self.dict)
         self.dict['country'] = helper.findCountry()
+
+    '''
+        Get Split keywords
+    '''
+    def getKwd(self):
+        kwd = filter(lambda x: not (x is None), self.dict['keywords'])
+        kwd = map(lambda k: k.split(' '), kwd)
+        self.dict['kwds'] = sum(kwd, [])

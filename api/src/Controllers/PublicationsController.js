@@ -1,9 +1,9 @@
 const Publication = require('../Models/Publication');
 const Country = require('../Models/Country');
+const KeywordJob = require('../Jobs/KeywordJob');
+
 const log = require('../Utils/Logger');
 const { updateOrCreate } = require('../Helpers/Criteria');
-const { findOrCreateCache } = require('../Helpers/Cache');
-
 module.exports = {
 
     /**
@@ -15,16 +15,37 @@ module.exports = {
     async save(req, res) {
 
         try {
-            let { publication } = req.body
+            let { publication } = req.body;
+
+            const { kwds } = publication;
 
             publication = await updateOrCreate(Publication, {pmc: parseInt(publication.pmc)}, publication)
-            console.log(publication._id,  ' :: ', publication.country);
+
+            const job = KeywordJob
+                .create('ProcessKeywords', {
+                    kwds,
+                    country: publication.country,
+                    publicationId: publication._id, 
+                })
+                .priority('high')
+                .delay(100)
+                .attempts(5)
+                .save()
+
+            job.once('start', (e) => {
+                log.success({ message: 'JOB START', pmc: publication.pmc });
+            })
+            job.on('failed', (e) => {
+                log.error({ message: 'JOB FAILED', pmc: publication.pmc, err: e })
+            })
+            job.on('complete', (e) => {
+                log.success({ message: 'JOB COMPLETE', pmc: publication.pmc })
+            })
             
             res.json({ message: 'SAVE SUCCESSFUL', data: publication });
 
         } catch (e) {
 
-            console.log('FAIL');
             log.error({ message: 'FAIL TO SAVE PUBLICATION', error: e.message, req: req.body})
             res.json({ message: 'SAVE FAILURE', error: e.message })
         }
