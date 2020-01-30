@@ -1,5 +1,6 @@
 const Keyword = require('../Models/Keyword');
 const Country = require('../Models/Country');
+const Publication = require('../Models/Publication');
 
 module.exports = {
 
@@ -39,29 +40,33 @@ module.exports = {
     async countries(req, res) {
 
         const { id } = req.params;
-        const keyword = await Keyword.findOne({_id: id}).exec()
+        const keyword = await Keyword.findOne({_id: id}).exec();
+        let countries = keyword.countries.map(id => id.toString());
 
+        distinctCountries = [...new Set(countries)];
+        
 
-        distinctCountries = [...new Set(keyword.countries)];
-
-        const countries = await Promise.all(
+        countries = await Promise.all(
             distinctCountries.map(async(_id) => {
-                
-                const country = await Country.findOne({ _id });
+                const country = await Country.findById(_id);
                 const pubs = await Publication.find({ country: _id }).count();
-                const countrykwds = keyword.countries.filter(c => c === _id).length;
-
+                const countrykwds = countries.filter(id => id === _id).length;
                 return {
                     _id: country._id,
                     name: country.name,
                     code: country.code.toLowerCase(),
-                    relative: countrykwds/pubs,
-                    percentage: countrykwds/keyword.countries.length
+                    relative: (countrykwds/pubs * 100).toFixed(2),
+                    percentage: (countrykwds/keyword.countries.length * 100).toFixed(2),
+                    total: countrykwds,
                 }
 
             })
         );
 
-        return res.json(countries)
+        countries = countries.sort((a,b) => a.relative < b.relative)
+
+        return res.json({
+            countries: JSON.stringify(countries)
+        });
     }
 }

@@ -16,10 +16,9 @@ export default function CountryList(props) {
             {props.countries.map((country, i) => 
                 <ListItem key={i}>
                     <ListItemAvatar>
-                        { console.log(country) }
                         <FlagIcon code={country.code} size="2x"/>
                     </ListItemAvatar>
-                    <ListItemText primary={`${i+1}º ${country.name}`} secondary={`${country.count} (${country.percentage}%)`} />
+                    <ListItemText primary={`${i+1}º ${country.name}`} secondary={props.secondary(country)} />
                 </ListItem>
             )}
         </List>

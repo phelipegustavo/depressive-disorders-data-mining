@@ -3,7 +3,6 @@ import pprint
 import xmltodict
 import os
 
-
 from Utils.Country import Country
 import Utils.Parser as utils
 '''
@@ -48,7 +47,14 @@ class Parser:
         self.dict['doi'] = utils.get_text(self.tree, './/article-meta/article-id/[@pub-id-type="doi"]')
         self.dict['publisherId'] = utils.get_text(self.tree, './/article-meta/article-id/[@pub-id-type="publisher-id"]')
         # Keywords
-        self.dict['keywords'] = utils.get_text_array(self.tree, './/article-meta/*/kwd')
+        self.dict['keywords'] = []
+        for i in self.tree.findall('.//article-meta/*/kwd'):
+            for t in i.findall('.//*'):
+                self.dict['keywords'].append(t.text)
+        
+        if len(self.dict['keywords']) == 0:
+            self.dict['keywords'] = utils.get_text_array(self.tree, './/article-meta/*/kwd')
+
         # ElocationId
         self.dict['elocationId'] = utils.get_text(self.tree, './/journal-meta/elocationId')
         # Categories
@@ -61,7 +67,6 @@ class Parser:
         self.getAffiliations() 
         self.getCountry()       
         self.getKwd()
-        print(self.dict['kwds'])
         
         return self
 
@@ -175,6 +180,14 @@ class Parser:
         Get Split keywords
     '''
     def getKwd(self):
-        kwd = filter(lambda x: not (x is None), self.dict['keywords'])
-        kwd = map(lambda k: k.split(' '), kwd)
-        self.dict['kwds'] = sum(kwd, [])
+        with open(f'{os.path.dirname(__file__)}/Cache/stopwords.json') as json_file:
+            stopwords = json.load(json_file)
+            kwd = map(lambda k: self.clearString(k), self.dict['keywords'])
+            flat_list = [item for sublist in kwd for item in sublist]
+            kwd = filter(lambda x: not (x is None) and not (x.lower() in stopwords), flat_list)
+            self.dict['kwds'] = list(kwd)
+
+    def clearString(self, string):
+        string = string.replace(',', '')
+        string = string.split(' ')
+        return string

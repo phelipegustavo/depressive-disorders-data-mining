@@ -74,7 +74,7 @@ export default class Countries extends Component {
                         </Pie>
                         <Tooltip formatter={(value, name, {payload}) => `${name} : ${value} (${payload.percentage})%` }/>
                     </PieChart>
-                    <CountryList countries={this.state.data} />
+                    <CountryList countries={this.state.data} secondary={(c) => `${c.count} (${c.percentage}%)`} />
                 </Box>
             </React.Fragment>
         );

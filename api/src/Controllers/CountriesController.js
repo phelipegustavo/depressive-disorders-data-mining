@@ -1,4 +1,3 @@
-const fs = require('fs');
 const Country = require('../Models/Country');
 const { findOrCreate } = require('../Helpers/Criteria');
 const { readFile } = require('../Helpers/File');

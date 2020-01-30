@@ -102,7 +102,7 @@ class Country:
             found = res[0]
         except:
             self.reportNotFound(f'NOMINATIN CANOT FOUND {countryName} >> RESPONSE :: {json.dumps(res)}')
-            return False
+            return None
 
         return found['address']
 

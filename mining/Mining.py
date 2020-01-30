@@ -16,6 +16,7 @@ class Mining:
 		self.db = db
 		self.term = term
 		self.path = ''
+		self.isOffline = False
 		self.pagination = {
 			'page': 0,
 			'total': 0,
@@ -34,6 +35,16 @@ class Mining:
 			if(idlist):
 				self.fetchIds(idlist) 
 			self.nextPage()
+
+	def offline(self):
+		self.isOffline = True
+		files = os.listdir(self.db + '/XML/' + self.term)
+		self.pagination['count'] = len(files)
+		self.pagination['current'] = 1
+		for file in files:
+			id = file.split('.xml')[0]
+			print(id)
+			self.saveItem(id)
 
 	def fetchIds(self, ids):
 		for id in ids:
@@ -114,18 +125,23 @@ class Mining:
 			if(data['publication']):
 				requests.post(url = f'{API}/publications', data = json.dumps(data), headers = headers) 
 
-			File.cls()
+			# File.cls()
 			total = self.pagination['current']/self.pagination['count'] * 100
+
 			print('\t<<< MINING >>>')
 			print('\tTOTAL:', self.pagination['count'])
 			print('\tDONE:', self.pagination['current'])
-			print('\tPAGE:', self.pagination['page'])
 			print('\tPMC:', id)
 			print('\tPROGRESS:', round(total, 3), '%')
+
+			if(not self.isOffline):
+				print('\tPAGE:', self.pagination['page'])
+			
 			self.pagination['current'] += 1
+
 		except:
 			if(retries < 5):
-				print(f'\t SAVE AGAIN: ({retries+1} ID > id')
-				time.sleep(100)
+				print(f'\t SAVE AGAIN: ({retries+1} ID > {id}')
+				time.sleep(30)
 				self.saveItem(id, retries+1)
 			return

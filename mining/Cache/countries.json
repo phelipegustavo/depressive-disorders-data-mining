@@ -546,12 +546,6 @@
         "code": "SZ"
     },
     {
-        "_id": "5df6a2170975ff383f9af309",
-        "regex": "venezuela",
-        "name": "Bolivarian Republic of Venezuela",
-        "code": "VE"
-    },
-    {
         "_id": "5df6a2170975ff383f9af2da",
         "regex": "\\bs(\\.|outh).*africa",
         "name": "Republic of South Africa",
@@ -1498,5 +1492,11 @@
         "regex": "^(?=.*\\bu\\.?\\s?k).*virgin|^(?=.*br.*).*virgin|^(?=.*kingdom).*virgin|BVI",
         "name": "British Virgin Islands",
         "code": "VG"
+    },
+    {
+        "_id": "5df6a2170975ff383f9af309",
+        "regex": "venezuela",
+        "name": "Bolivarian Republic of Venezuela",
+        "code": "VE"
     }
 ]

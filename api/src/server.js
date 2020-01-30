@@ -10,6 +10,7 @@ mongoose.connect(`mongodb://${mongo.user}:${mongo.password}@${mongo.host}:${mong
     useCreateIndex: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
+    useFindAndModify: false,
 });
 
 server.use(cors());

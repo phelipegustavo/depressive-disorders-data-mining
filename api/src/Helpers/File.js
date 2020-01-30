@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 /**
  * Read file from path
  * 

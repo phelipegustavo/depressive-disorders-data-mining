@@ -5,6 +5,11 @@ const KeywordSchema = new Schema({
         type: String,
         required: true,
     },
+    count: {
+        type: Number,
+        required: true,
+        default: 1,
+    },
     publications: [{
         type: Schema.Types.ObjectId,
         ref: 'Publication',

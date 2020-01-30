@@ -59,7 +59,8 @@ export default class Keywords extends Component {
         const url = api(`keywords/${_id}/countries`)
         const res = await fetch(url, headers);
         let countries = await res.json();
-        this.setState({ countries }, () => console.log(this.state.countries));
+        countries = JSON.parse(countries.countries);
+        this.setState({ countries });
     }
 
     render() {
@@ -78,7 +79,7 @@ export default class Keywords extends Component {
                         </ListItem>
                     )) }
                 </List>
-                <CountryList countries={this.state.countries} />
+                <CountryList countries={this.state.countries} secondary={(c) => `${c.total} rel.: (${c.relative})% abs.: (${c.percentage}%)`}/>
             </Box>
         )
     }

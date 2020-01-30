@@ -26,9 +26,9 @@ Queue.process('ProcessKeywords', async ({data}, done) => {
                     const name = kwd.toLowerCase();
                     
                     // Invalid keyword
-                    if(!name) return;
+                    if(!name || name == '' || name == ' ') return;
 
-                    let keyword = await Keyword.findOne({ name }).exec();
+                    let keyword = await Keyword.findOne({ name });
 
                     if(keyword) {
 
@@ -36,8 +36,8 @@ Queue.process('ProcessKeywords', async ({data}, done) => {
                             // Already inserted for this publication
                             return;
                         }
-
-                        keyword.publications.push(publicationId)
+                        keyword.count += 1;
+                        keyword.publications.push(publicationId);
                         keyword.countries.push(country);
 
                         return await keyword.save();
@@ -46,6 +46,7 @@ Queue.process('ProcessKeywords', async ({data}, done) => {
 
                         keyword = {
                             name,
+                            count: 1,
                             countries: [country],
                             publications: [publicationId],
                         }
