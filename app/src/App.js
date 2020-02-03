@@ -9,6 +9,7 @@ import  {
 import Dashboard from 	'./components/Common/Dashboard/Dashboard';
 import Map from 	'./components/Map/Map';
 import Charts from 	'./components/Charts/Charts';
+import Keywords from './components/Keywords/Keywords';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Switch>
             <Route exact path="/" component={Map} />
             <Route path="/charts" component={Charts} /> 
+            <Route path="/keywords" component={Keywords} /> 
           </Switch>
         </Router>
       </div>

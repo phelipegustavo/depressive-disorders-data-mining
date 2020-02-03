@@ -2,21 +2,12 @@ import React, { Component } from 'react';
 
 import { api, headers } from '../../constants';
 
-import { 
-    Box,
-} from '@material-ui/core';
-
-import { Trans } from 'react-i18next';
-
 import InfiniteScroll from '../Common/List/InfiniteScroll';
 
-import KeywordCountries from './KeywordCountries';
-
-export default class Keywords extends Component {
+export default class KeywordList extends Component {
 
     state = {
         keywords: [],
-        selected: {},
         loading: false,
         search: '',
         page: 1,
@@ -75,29 +66,20 @@ export default class Keywords extends Component {
 
     render() {
         return (
-            <Box 
-                display="flex"
-                alignItems="start"
-                justifyContent="space-around" 
-                height="100%"
-                p={1}
-            >
-                <InfiniteScroll 
-                    items={this.state.keywords.filter(({name}) => (
-                        new RegExp(`.*${this.state.search}.*`, 'gi')).test(name)
-                    )}
-                    onSearch={this.onSearch.bind(this)}
-                    onScroll={this.onScroll.bind(this)}
-                    primary={(item, i) => `(${i+1})ª ${item.name}`} 
-                    secondary={(item) => item.count}
-                    selected={(item) => item._id === this.state.selected._id}
-                    onSelect={(e, selected) => this.setState({ selected })}
-                    style={{minWidth: '300px'}}
-                    isLoading={this.state.loading}
-                />
-                <Trans i18nKey="Countries" />
-                <KeywordCountries keyword={this.state.selected} />
-            </Box>
+            <InfiniteScroll 
+                items={this.state.keywords.filter(({name}) => (
+                    new RegExp(`.*${this.state.search}.*`, 'gi')).test(name)
+                )}
+                onSearch={this.onSearch.bind(this)}
+                onScroll={this.onScroll.bind(this)}
+                primary={(item, i) => `(${i+1})ª ${item.name}`} 
+                secondary={(item) => item.count}
+                selected={(item) => item._id === this.props.selected._id}
+                onSelect={this.props.onSelect}
+                style={{minWidth: '400px'}}
+                height="70vh"
+                isLoading={this.state.loading}
+            />
         )
     }
 }

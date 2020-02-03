@@ -63,6 +63,7 @@ export default class KeywordCountries extends Component {
                 )}
                 onSearch={this.onSearch.bind(this)}
                 isLoading={this.state.loading}
+                height="70vh"
                 primary={(c, i) => `${c.index+1}º ${c.name}`} 
                 secondary={(c) => `tot.: ${c.total} rel.: (${c.relative})% abs.: (${c.percentage}%)`}
                 avatar={(item) => (

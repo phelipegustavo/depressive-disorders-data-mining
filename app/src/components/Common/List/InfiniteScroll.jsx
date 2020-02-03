@@ -58,14 +58,13 @@ export default function InfiniteScroll(props) {
                 value={props.search} 
                 onChange={props.onSearch}
                 disabled={!!props.isLoading}
-                width="100%"
-                style={{marginBottom: '5px'}}
+                style={{marginBottom: '5px', width: '100%'}}
             />
             <div style={{display: 'flex', flexGrow: 1, alignItems: !!props.items.length && !props.isLoading ? 'start' : 'center', justifyContent: 'center', width: '100%'}}>
             { props.isLoading === 'NO_DATA' || props.isLoading === true ? 
                 <ColorCircularProgress size={50} thickness={5} /> 
                 : props.items && !!props.items.length ? 
-                    <List className="scroll" component="ul" style={{ maxHeight: '350px',overflowY: 'auto',  width: '100%' }} onScroll={props.onScroll}>
+                    <List className="scroll" component="ul" style={{ maxHeight: props.height ? props.height : '350px', overflowY: 'auto',  width: '100%' }} onScroll={props.onScroll}>
                         { props.items
                             .map((item, i) => 
                                 <ListItem 
