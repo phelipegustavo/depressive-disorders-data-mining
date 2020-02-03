@@ -62,7 +62,7 @@ const renderActiveShape = (props) => {
 };
 
 
-export default class Found extends Component {
+export default class MiningChart extends Component {
 
     state = {
         activeIndex: 0,
@@ -88,13 +88,13 @@ export default class Found extends Component {
                 <Typography gutterBottom variant="h5" component="h2">
                     <Trans i18nKey="Identified countries" />
                 </Typography>
-                <PieChart width={600} height={400}>
+                <PieChart width={600} height={425}>
                     <Pie
                         activeIndex={this.state.activeIndex}
                         activeShape={renderActiveShape}
                         data={this.state.data}
                         cx={300}
-                        cy={200}
+                        cy={212}
                         innerRadius={60}
                         outerRadius={80}
                         fill="#8884d8"

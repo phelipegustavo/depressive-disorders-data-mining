@@ -11,9 +11,12 @@ import {
 import {
     Box,
     Typography,
+    ListItemAvatar,
 } from '@material-ui/core';
 
-import CountryList from '../Common/Country/CountryList';
+import FlagIcon from '../Common/Flag/FlagIcon';
+
+import InfiniteScroll from '../Common/List/InfiniteScroll';
 
 const randColor = (colors) => {
     let color = '';
@@ -25,14 +28,15 @@ const randColor = (colors) => {
     return color;
 }
 
-export default class Countries extends Component {
+export default class MiningCountries extends Component {
 
     state = {
+        search: '',
         data: [],
     }
 
     static getDerivedStateFromProps(props, state) {
-        if (props.data) {
+        if (props.data !== state.data) {
             let colors = [];
             return {
                 data: props.data,
@@ -44,6 +48,11 @@ export default class Countries extends Component {
             };
         }
         return null;
+    }
+
+    onSearch(e) {
+        const search = e.target.value;
+        this.setState({ search });
     }
 
     render() {
@@ -74,7 +83,20 @@ export default class Countries extends Component {
                         </Pie>
                         <Tooltip formatter={(value, name, {payload}) => `${name} : ${value} (${payload.percentage})%` }/>
                     </PieChart>
-                    <CountryList countries={this.state.data} secondary={(c) => `${c.count} (${c.percentage}%)`} />
+                    <InfiniteScroll 
+                        items={this.state.data.filter(({name}) => (
+                            new RegExp(`.*${this.state.search}.*`, 'gi')).test(name)
+                        )}
+                        isLoading={this.state.loadingContries}
+                        primary={(c, i) => `${c.index+1}º ${c.name}`} 
+                        secondary={(c) => `${c.count} (${c.percentage}%)`}
+                        onSearch={this.onSearch.bind(this)}
+                        avatar={(item) => (
+                            <ListItemAvatar>
+                                <FlagIcon code={item.code} size="2x"/>
+                            </ListItemAvatar>
+                        )}
+                    />
                 </Box>
             </React.Fragment>
         );

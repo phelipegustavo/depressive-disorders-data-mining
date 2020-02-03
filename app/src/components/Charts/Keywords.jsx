@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
-import { Trans } from 'react-i18next';
 
 import { api, headers } from '../../constants';
+
 import { 
-    Card ,
-    List,
-    ListItem,
-    ListItemText,
     Box,
 } from '@material-ui/core';
 
-import CountryList from '../Common/Country/CountryList';
+import { Trans } from 'react-i18next';
+
+import InfiniteScroll from '../Common/List/InfiniteScroll';
+
+import KeywordCountries from './KeywordCountries';
 
 export default class Keywords extends Component {
 
     state = {
         keywords: [],
-        countries: [],
+        selected: {},
         loading: false,
         search: '',
         page: 1,
@@ -25,6 +25,7 @@ export default class Keywords extends Component {
     }
 
     componentDidMount() {
+        this.setState({ loading: 'NO_DATA' })
         this.getData();
     }
 
@@ -35,13 +36,14 @@ export default class Keywords extends Component {
         const bottom = height - top;
         if(e.target.clientHeight/bottom * 100 >= 40) {
             const page = this.state.page + 1;
-            this.setState({ page });
-            await this.getData();
+            this.setState({ 
+                page, 
+                loading: 'MORE' 
+            }, async () => await this.getData());
         }
     }
 
     async getData() {
-        this.setState({loading: true})
         const url = api('keywords', {
             page: this.state.page,
             perPage: this.state.perPage,
@@ -51,16 +53,24 @@ export default class Keywords extends Component {
         let items = await res.json();
         let keywords = this.state.keywords;
         keywords = keywords.concat(items)
-        this.setState({ keywords });
-        this.setState({ loading: false })
+        this.setState({ 
+            keywords,
+            loading: false
+        });
     }
 
-    async getCountry(_id) {
-        const url = api(`keywords/${_id}/countries`)
-        const res = await fetch(url, headers);
-        let countries = await res.json();
-        countries = JSON.parse(countries.countries);
-        this.setState({ countries });
+    onSearch(e) {
+        const search = e.target.value
+        clearTimeout(this.state.debounce);
+        const debounce = setTimeout(() => {
+            this.setState({ 
+                search, 
+                page: 1, 
+                perPage: 10, 
+                keywords: [] 
+            }, async () => await this.getData());
+        }, 300);
+        this.setState({ debounce })
     }
 
     render() {
@@ -69,17 +79,24 @@ export default class Keywords extends Component {
                 display="flex"
                 alignItems="start"
                 justifyContent="space-around" 
-                m={2}
-                style={{maxHeight: "320px"}}
+                height="100%"
+                p={1}
             >
-                <List component="ul" style={{width: '300px', overflowY: 'auto', maxHeight: 'inherit'}} onScroll={this.onScroll.bind(this)} >
-                    { this.state.keywords.map((item, i) => (
-                        <ListItem key={i} button style={{ padding: 0 }} onClick={() => this.getCountry(item._id)}>
-                            <ListItemText primary={item.name} secondary={item.count} />
-                        </ListItem>
-                    )) }
-                </List>
-                <CountryList countries={this.state.countries} secondary={(c) => `${c.total} rel.: (${c.relative})% abs.: (${c.percentage}%)`}/>
+                <InfiniteScroll 
+                    items={this.state.keywords.filter(({name}) => (
+                        new RegExp(`.*${this.state.search}.*`, 'gi')).test(name)
+                    )}
+                    onSearch={this.onSearch.bind(this)}
+                    onScroll={this.onScroll.bind(this)}
+                    primary={(item, i) => `(${i+1})ª ${item.name}`} 
+                    secondary={(item) => item.count}
+                    selected={(item) => item._id === this.state.selected._id}
+                    onSelect={(e, selected) => this.setState({ selected })}
+                    style={{minWidth: '300px'}}
+                    isLoading={this.state.loading}
+                />
+                <Trans i18nKey="Countries" />
+                <KeywordCountries keyword={this.state.selected} />
             </Box>
         )
     }

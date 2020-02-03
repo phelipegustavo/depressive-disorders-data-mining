@@ -11,8 +11,8 @@ import { api, headers } from '../../constants';
 
 import { Trans } from 'react-i18next';
 
-import Mining from './Mining';
-import Countries from './Countries';
+import MiningChart from './MiningChart';
+import MiningCountries from './MiningCountries';
 import Keywords from './Keywords';
 
 export default class Charts extends Component {
@@ -40,34 +40,39 @@ export default class Charts extends Component {
     render() {
         return (
             <React.Fragment>
-                <Typography gutterBottom variant="h5" component="h2" style={{ padding: '30px'} }>
-                    <Trans i18nKey="Charts desc" />
+                <Typography gutterBottom variant="h5" component="h2" style={{ padding: '30px'}}>
+                    <Trans i18nKey="Charts" />
                 </Typography>
                 <Box 
                     display="flex"
                     alignItems="center"
                     justifyContent="space-around" 
                     p={1}
-                    m={1}
+                    m={0}
                 >
                     <Card>
                         <CardContent>
-                            <Mining data={this.state.mining}/>
+                            <MiningChart data={this.state.mining}/>
                         </CardContent>
                     </Card>
                     <Card>
                         <CardContent>
-                            <Countries data={this.state.countries}/>
+                            <MiningCountries data={this.state.countries}/>
                         </CardContent>
                     </Card>
                 </Box>
+                <Typography gutterBottom variant="h5" component="h5" style={{ padding: '30px'} }>
+                    <Trans i18nKey="Keywords"/> 
+                </Typography>
                 <Box 
                     display="flex"
-                    alignItems="center"
+                    alignItems="start"
                     justifyContent="space-around" 
                     p={1}
+                    m={0}
+                    height="100%"
                 >
-                    <Card style={{width: '50%', maxHeight: '350px'}}>
+                    <Card style={{width: '50%', height: '100%', margin: 0, padding: 0}}>
                         <Keywords />
                     </Card>
                 </Box>
