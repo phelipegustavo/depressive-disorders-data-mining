@@ -180,14 +180,26 @@ class Parser:
         Get Split keywords
     '''
     def getKwd(self):
+        
+        if not self.dict['keywords']:
+            self.dict['kwds'] = []
+            print('no kwd')
+            print(self.dict['keywords'])
+            return
+
         with open(f'{os.path.dirname(__file__)}/Cache/stopwords.json') as json_file:
             stopwords = json.load(json_file)
             kwd = map(lambda k: self.clearString(k), self.dict['keywords'])
+            print('kwd')
+            print(kwd)
             flat_list = [item for sublist in kwd for item in sublist]
             kwd = filter(lambda x: not (x is None) and not (x.lower() in stopwords), flat_list)
             self.dict['kwds'] = list(kwd)
 
     def clearString(self, string):
-        string = string.replace(',', '')
-        string = string.split(' ')
+        if string:
+            string = string.replace(',', '')
+            string = string.split(' ')
+        else:
+            return ''
         return string

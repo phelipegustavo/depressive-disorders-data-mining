@@ -19,6 +19,7 @@ export default class Charts extends Component {
     state = {
         mining: [],
         countries: [],
+        loading: false,
     }
 
     componentDidMount() {
@@ -26,6 +27,7 @@ export default class Charts extends Component {
     }
 
     async getData() {
+        this.setState({ loading: true })
         const url = api('charts/list')
         const res = await fetch(url, headers);
         const {identifiedCountry, total, countries} = await res.json();
@@ -33,7 +35,11 @@ export default class Charts extends Component {
             { value: identifiedCountry,  name: 'Defined Country', color: '#00e676' },
             { value: total - identifiedCountry,  name: 'Undefined Country', color: '#f50057' }
         ];
-        this.setState({ mining, countries });
+        this.setState({ 
+            mining, 
+            countries, 
+            loading: false 
+        });
     }
 
     render() {
@@ -46,17 +52,17 @@ export default class Charts extends Component {
                     display="flex"
                     alignItems="center"
                     justifyContent="space-around" 
+                    flexWrap="wrap"
                     p={1}
-                    m={0}
                 >
-                    <Card>
+                    <Card style={{ margin: '5px' }}>
                         <CardContent>
                             <MiningChart data={this.state.mining}/>
                         </CardContent>
                     </Card>
-                    <Card>
+                    <Card style={{ margin: '5px' }}>
                         <CardContent>
-                            <MiningCountries data={this.state.countries}/>
+                            <MiningCountries data={this.state.countries} isLoading={this.state.isLoading} />
                         </CardContent>
                     </Card>
                 </Box>

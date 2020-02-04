@@ -4,6 +4,7 @@ import { api, headers } from '../../constants';
 
 import { Trans, useTranslation } from 'react-i18next';
 
+import './style.css'
 import {    
     Drawer,
     List,
@@ -159,7 +160,7 @@ export default class Publications extends Component {
                         placeholder="Search by title"
                     />
                 </Box>
-                <List component="ul" style={{width: '600px', overflowY: 'auto'}}>
+                <List component="ul" className="scroll" style={{width: '600px', overflowY: 'auto'}}>
                     { this.state.publications.map((item, index) => (
                         <ListItem key={index} button onClick={item.action} style={{ padding: 0 }}>
                             <ListItemLink href={`https://www.ncbi.nlm.nih.gov/pmc/${item.pmc}/`} target="_blank" >

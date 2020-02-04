@@ -27,6 +27,7 @@ export default class Keywords extends Component {
                     alignItems="start"
                     justifyContent="space-around" 
                     height="100%"
+                    flexWrap="wrap"
                     p={1}
                 >
                     <KeywordList selected={this.state.selected} onSelect={(e, selected) => this.setState({ selected })} />

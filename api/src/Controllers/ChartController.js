@@ -13,9 +13,9 @@ module.exports = {
 
         try {
             // All publications 
-            const total = await Publication.find({}).count();
+            const total = await Publication.find({}).countDocuments();
             // Identified country 
-            const identifiedCountry = await Publication.find({country: { $ne: null }}).count();       
+            const identifiedCountry = await Publication.find({country: { $ne: null }}).countDocuments();       
             
             // Publications countries
             const publications = await Publication.aggregate([
@@ -24,7 +24,7 @@ module.exports = {
                 { $sort: { count: -1 } },
             ]).exec()
             const countries = await Promise.all(
-                publications.map(async ({_id, count}) => {
+                publications.map(async ({_id, count}, index) => {
                     const country = await Country.findOne({_id})
                     if(country) {
                         return {
@@ -33,8 +33,9 @@ module.exports = {
                             lat: country.lat,
                             lng: country.lng,
                             code: country.code.toLowerCase(),
-                            count,
                             percentage: (count/total*100).toFixed(2),
+                            count,
+                            index,
                         }
                     }
                 })

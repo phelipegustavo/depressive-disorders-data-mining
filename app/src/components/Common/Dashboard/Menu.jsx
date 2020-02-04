@@ -14,7 +14,7 @@ import {
 import {
     Place,
     PieChart,
-    VpnKey,
+    TrendingUp,
 } from '@material-ui/icons';
 
 const items = [
@@ -31,7 +31,7 @@ const items = [
     {
         href: '/keywords', 
         text: 'Keywords', 
-        icon: <VpnKey/> 
+        icon: <TrendingUp/> 
     }
 ];
 

@@ -65,6 +65,7 @@ export default class MiningCountries extends Component {
                     display="flex"
                     alignItems="center"
                     justifyContent="space-around" 
+                    flexWrap="wrap"
                     p={0}
                     m={0}
                 >
@@ -81,13 +82,13 @@ export default class MiningCountries extends Component {
                             {this.state.data.map((country, index) => 
                                 <Cell key={country._id} fill={this.state.colors[index]} />)}
                         </Pie>
-                        <Tooltip formatter={(value, name, {payload}) => `${name} : ${value} (${payload.percentage})%` }/>
+                        <Tooltip formatter={(value, name, {payload}) => `${value} (${payload.percentage})%` }/>
                     </PieChart>
                     <InfiniteScroll 
                         items={this.state.data.filter(({name}) => (
                             new RegExp(`.*${this.state.search}.*`, 'gi')).test(name)
                         )}
-                        isLoading={this.state.loadingContries}
+                        isLoading={this.props.isLoading}
                         primary={(c, i) => `${c.index+1}º ${c.name}`} 
                         secondary={(c) => `${c.count} (${c.percentage}%)`}
                         onSearch={this.onSearch.bind(this)}

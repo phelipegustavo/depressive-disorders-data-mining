@@ -47,26 +47,28 @@ module.exports = {
         
 
         countries = await Promise.all(
-            distinctCountries.map(async(_id) => {
+            distinctCountries.map(async(_id, index) => {
                 const country = await Country.findById(_id);
-                const pubs = await Publication.find({ country: _id }).count();
+                const pubs = await Publication.find({ country: _id }).countDocuments();
                 const countrykwds = countries.filter(id => id === _id).length;
                 return {
                     _id: country._id,
                     name: country.name,
                     code: country.code.toLowerCase(),
-                    relative: (countrykwds/pubs * 100).toFixed(2),
-                    percentage: (countrykwds/keyword.countries.length * 100).toFixed(2),
+                    relative: parseFloat((countrykwds/pubs * 100).toFixed(2)),
+                    percentage: parseFloat((countrykwds/keyword.countries.length * 100).toFixed(2)),
                     total: countrykwds,
                 }
 
             })
         );
 
-        countries = countries.sort((a,b) => a.relative < b.relative)
+        countries = countries.sort((a,b) => a.percentage < b.percentage ? 1 : -1).map((c, index) => ({...c, index}))
 
         return res.json({
             countries: JSON.stringify(countries)
         });
     }
+
+    
 }

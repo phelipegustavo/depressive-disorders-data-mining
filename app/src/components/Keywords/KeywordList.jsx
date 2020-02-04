@@ -11,7 +11,7 @@ export default class KeywordList extends Component {
         loading: false,
         search: '',
         page: 1,
-        perPage: 10,
+        perPage: 20,
         debounce: null,
     }
 
@@ -76,7 +76,7 @@ export default class KeywordList extends Component {
                 secondary={(item) => item.count}
                 selected={(item) => item._id === this.props.selected._id}
                 onSelect={this.props.onSelect}
-                style={{minWidth: '400px'}}
+                style={{minWidth: '350px'}}
                 height="70vh"
                 isLoading={this.state.loading}
             />

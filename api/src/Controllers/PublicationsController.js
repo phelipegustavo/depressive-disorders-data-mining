@@ -65,7 +65,7 @@ module.exports = {
             { $sort: { count: -1 } },
         ]).exec()
 
-        const total = await Publication.find({ country: { $ne: null } }).count();
+        const total = await Publication.find({ country: { $ne: null } }).countDocuments();
         const items = await Promise.all(
             countries.map(async ({_id, count}) => {
                 const country = await Country.findOne({_id})
