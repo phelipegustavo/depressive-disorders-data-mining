@@ -12,6 +12,7 @@ export default class Map extends Component {
         super(props);
         this.state = { 
             countries: [],
+            keywords: [],
             country: false,
             publications: false,
         };
@@ -26,9 +27,30 @@ export default class Map extends Component {
         this.setState({ publications })
     }
 
-    selectCountry(e, country=false) {
-        this.setState({ country })
-        this.setState({ publications: !!country })
+    async selectCountry(e, country=false) {
+        let keywords = [];
+        if(country && country._id) {
+            keywords = await this.getKeywords(country);
+        }
+        console.log({ 
+            keywords,
+            country,
+            publications: !!country,
+        });
+        this.setState({ 
+            keywords,
+            country,
+            publications: !!country,
+        });
+    }
+
+    async getKeywords({_id}) {
+        const url = api(`countries/${_id}/keywords`, {
+            perPage: 5,
+            page: 1,
+        })
+        const res = await fetch(url, headers)
+        return await res.json();
     }
 
     async getCountries() {
@@ -51,6 +73,7 @@ export default class Map extends Component {
                     markers={this.state.countries} 
                     select={this.selectCountry.bind(this)}
                     country={this.state.country}
+                    keywords={this.state.keywords}
                 />
                 <Publications 
                     open={this.state.publications} 

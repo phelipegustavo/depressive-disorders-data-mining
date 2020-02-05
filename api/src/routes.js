@@ -12,6 +12,9 @@ routes.post('/countries', CountriesController.save);
 
 // List all countries
 routes.get('/countries', CountriesController.list);
+   
+// List Keywords By Country
+routes.get('/countries/:country/keywords', CountriesController.keywords);
 
 // List all coutries with publications count
 routes.get('/publications', PublicationsController.list);

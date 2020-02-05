@@ -1,4 +1,6 @@
 const Country = require('../Models/Country');
+const Keyword = require('../Models/Keyword');
+const { Types } = require('mongoose');
 const { findOrCreate } = require('../Helpers/Criteria');
 const { readFile } = require('../Helpers/File');
 
@@ -68,5 +70,58 @@ module.exports = {
             console.log(error)
             res.json({error})
         }
+    },
+
+    /**
+     * List Keywords By Country
+     * 
+     * @param {*} req 
+     * @param {*} res 
+     */
+    async keywords(req, res) {
+
+        const { country } = req.params;
+        let { page, perPage, search } = req.query;
+
+        page = page ? Number(page) : 1;
+        perPage = perPage ? Number(perPage) : 10;
+        search = search ? search : '';
+
+        const keywords = await Keyword.aggregate([
+            {
+                $match: {
+                    countries: { $eq: Types.ObjectId(country) }
+                }
+            },
+            { 
+                $project: {
+                    _id: "$_id",
+                    name: "$name",
+                    countries: {
+                        $filter: {
+                            input: "$countries",
+                            as: "country",
+                            cond: { $eq: ["$$country", Types.ObjectId(country)] }
+                        }
+                    }
+                }
+            },
+            {
+                $project: {
+                    _id: "$_id",
+                    name: "$name",
+                    country: { $arrayElemAt: ["$countries", 0] },
+                    total: { $size: "$countries" }
+                }
+            },
+            {
+                $sort : { total : -1 }
+            },
+            {
+                $limit: 5,
+            }
+        ]).exec();
+
+        res.json(keywords)
     }
 }

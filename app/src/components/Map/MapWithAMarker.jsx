@@ -39,10 +39,13 @@ export default compose(
 				onClick={(e) => props.select(e, country)}>
 					{props.country && props.country._id === country._id && 
                     <InfoWindow onCloseClick={props.select}>
-						<span> 
-							{ country.code && <FlagIcon code={country.code} />}
-							{ country.name } ({country.count})
-						</span>
+						<div> 
+							<span>{ country.code && <FlagIcon code={country.code} />}</span>
+							<span style={{ margin: '0 10px' }}>{ country.name } ({country.count})</span>
+							<ul>
+								{ props.keywords.map(({_id, name, total}) => <li key={_id}>{name} ({total})</li>) }
+							</ul>
+						</div>
 					</InfoWindow>}
 			</Marker>
 		))}
