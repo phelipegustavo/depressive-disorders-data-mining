@@ -1,4 +1,4 @@
-const apiUrl = 'http://localhost:5555';
+const apiUrl = process.env.REACT_APP_API_URL;
 
 export const googleMapURL = 'https://maps.googleapis.com/maps/api/js?AIzaSyBU_jAnvZKTJ3s4ewBwimDqMZdh09J8NJ0';
 
