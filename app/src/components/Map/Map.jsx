@@ -17,7 +17,6 @@ export default function Map() {
         getPublications();
     }, []);
 
-
     const getPublications = async () => {
         const url = api('publications')
         const res = await fetch(url, headers)
