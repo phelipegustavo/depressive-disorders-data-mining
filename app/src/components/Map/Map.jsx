@@ -1,12 +1,27 @@
   
 import React, { useState, useEffect } from 'react';
+import clsx from 'clsx';
 
 import { api, headers, googleMapURL } from '../../constants';
+import { makeStyles } from '@material-ui/core/styles';
+import { Box } from '@material-ui/core';
 
 import MapWithAMarker from './MapWithAMarker';
 import Publications from './Publications';
 
+const useStyles = makeStyles(theme => ({
+    mapShift: {
+        transition: theme.transitions.create('margin', {
+          easing: theme.transitions.easing.easeOut,
+          duration: theme.transitions.duration.enteringScreen,
+        }),
+        marginRight: '610px',
+    }
+}));
+
 export default function Map() {
+
+    const classes = useStyles();
 
     const [ keywords, setKeywords ] = useState([]);
     const [ publications, setPublications ] = useState(false);
@@ -49,16 +64,25 @@ export default function Map() {
 
     return (
         <React.Fragment>
-            <MapWithAMarker
-                googleMapURL={googleMapURL}
-                loadingElement={<div style={{ display: 'flex', flex: 1 }} />}
-                containerElement={<div style={{ display: 'flex', flex: 1 }} />}
-                mapElement={<div style={{ display: 'flex', flex: 1  }} />}
-                markers={countries} 
-                select={selectCountry}
-                country={country}
-                keywords={keywords}
-            />
+            
+            <Box
+                display="flex"
+                flex="1"
+                className={clsx({[classes.mapShift]: publications})}
+                p={0}
+                m={0}
+            >
+                <MapWithAMarker
+                    googleMapURL={googleMapURL}
+                    loadingElement={<div style={{ display: 'flex', flex: 1 }} />}
+                    containerElement={<div style={{ display: 'flex', flex: 1 }} />}
+                    mapElement={<div style={{ display: 'flex', flex: 1  }} />}
+                    markers={countries} 
+                    select={selectCountry}
+                    country={country}
+                    keywords={keywords}
+                />
+            </Box>
             <Publications 
                 open={publications} 
                 country={country} 
