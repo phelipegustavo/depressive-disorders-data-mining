@@ -1,10 +1,13 @@
   
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import clsx from 'clsx';
 
 import { api, headers, googleMapURL } from '../../constants';
-import { makeStyles } from '@material-ui/core/styles';
-import { Box } from '@material-ui/core';
+import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { 
+    Box,
+    CircularProgress,
+} from '@material-ui/core';
 
 import MapWithAMarker from './MapWithAMarker';
 import Publications from './Publications';
@@ -19,21 +22,58 @@ const useStyles = makeStyles(theme => ({
     }
 }));
 
+const ColorCircularProgress = withStyles({
+    root: {
+      color: '#6798e5',
+    },
+})(CircularProgress);
+
+const Loading = (props) => {
+    
+    const classes = useStyles();
+
+    return (
+        <Box
+            display="flex"
+            flex="1"
+            alignItems="center"
+            justifyContent="center"
+            justifyItems="center"
+            style={{ 
+                backgroundColor: 'transparent',
+                background: '#0009',
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: `calc(100% - ${props.drawerWidth})`,
+                height: '100vh',
+                zIndex: '9'
+            }}
+            p={0}
+            m={0}
+        >
+            <ColorCircularProgress size={50} thickness={5} />
+        </Box>
+    );
+}
+
 export default function Map() {
 
     const classes = useStyles();
 
     const [ keywords, setKeywords ] = useState([]);
-    const [ publications, setPublications ] = useState(false);
+    const [ showPublications, setShowPublications ] = useState(true);
     const [ country, setCountry ] = useState(false);
-
     const [ countries, setCountries ] = useState([]);
-    useEffect(() => {        
-        getPublications();
-    }, []);
-
-    const getPublications = async () => {
-        const url = api('publications')
+    const [ search, setSearch ] = useState('');
+    const [ debounce, setDebounce ] = useState(null);
+    const [ loading, setLoading ] = useState(null);
+    
+    const getCount = useCallback(async () => {
+        setLoading(true);
+        const url = api('publications/count', {
+            search,
+        })
         const res = await fetch(url, headers)
         const countries = await res.json();
         if(countries) {
@@ -41,16 +81,20 @@ export default function Map() {
         } else {
             console.error(`FAIL TO LOAD COUNTRIES`);
         }
-    }
+        setLoading(false);
+    }, [search])
 
-    const selectCountry = async (e, country=false) => {
+    useEffect(() => {
+        getCount();
+    }, [getCount])
+
+    const selectCountry = async (e, newContry=false) => {
         let keywords = [];
-        if(country && country._id) {
-            keywords = await getKeywords(country);
+        if(newContry && newContry._id && newContry !== country) {
+            keywords = await getKeywords(newContry);
+            setKeywords(keywords);
         }
-        setCountry(country);
-        setKeywords(keywords);
-        setPublications(!!country);
+        setCountry(newContry);
     }
 
     const getKeywords = async ({_id}) => {
@@ -62,16 +106,25 @@ export default function Map() {
         return await res.json();
     }
 
+    const onSearch = (e) => {
+        const { value } = e.target;
+        clearTimeout(debounce);
+        const timeout = setTimeout(() => {
+            setSearch(value);
+        }, 300);
+        setDebounce(timeout);
+    }
+
     return (
         <React.Fragment>
-            
             <Box
                 display="flex"
                 flex="1"
-                className={clsx({[classes.mapShift]: publications})}
+                className={clsx({[classes.mapShift]: showPublications})}
                 p={0}
                 m={0}
             >
+                { loading && <Loading drawerWidth={showPublications ? '610px' : '0'} /> }
                 <MapWithAMarker
                     googleMapURL={googleMapURL}
                     loadingElement={<div style={{ display: 'flex', flex: 1 }} />}
@@ -84,11 +137,13 @@ export default function Map() {
                 />
             </Box>
             <Publications 
-                open={publications} 
-                country={country} 
+                open={showPublications} 
+                toggleMenu={() => setShowPublications(!showPublications)} 
                 countries={countries} 
-                toggleMenu={() => setPublications(!publications)} 
+                country={country} 
                 selectCountry={selectCountry}
+                search={search}
+                onSearch={onSearch}
             />
         </React.Fragment>
     )

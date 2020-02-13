@@ -16,11 +16,11 @@ routes.get('/countries', CountriesController.list);
 // List Keywords By Country
 routes.get('/countries/:country/keywords', CountriesController.keywords);
 
-// List all coutries with publications count
-routes.get('/publications', PublicationsController.list);
+// Count publications by country
+routes.get('/publications/count', PublicationsController.count);
 
-// List all publictions of country
-routes.get('/publications/:country', PublicationsController.publications);
+// List all publictions
+routes.get('/publications', PublicationsController.list);
 
 // Save publication
 routes.post('/publications', PublicationsController.save);

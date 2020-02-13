@@ -55,7 +55,6 @@ module.exports = {
                     _id: country._id,
                     name: country.name,
                     code: country.code.toLowerCase(),
-                    relative: parseFloat((countrykwds/pubs * 100).toFixed(2)),
                     percentage: parseFloat((countrykwds/keyword.countries.length * 100).toFixed(2)),
                     total: countrykwds,
                 }

@@ -52,20 +52,27 @@ module.exports = {
     },
 
     /**
-     * List countries with publications count
+     * Count publications by country
      * 
      * @param {*} req 
      * @param {*} res 
      */
-    async list(req, res) {
+    async count(req, res) {
+        
+        let { search } = req.query;
 
+        search = search ? search : '';
+
+        const exp = new RegExp(`.*${search}.*`, 'gi');
+
+        const filter = { country: { $ne: null }, title: exp  };
         const countries = await Publication.aggregate([
-            { $match: { country: { $ne: null } } },
+            { $match: filter },
             { $group: { _id: "$country", count: { $sum: 1 } } },
             { $sort: { count: -1 } },
-        ]).exec()
+        ])
+        const total = await Publication.find(filter).countDocuments();
 
-        const total = await Publication.find({ country: { $ne: null } }).countDocuments();
         const items = await Promise.all(
             countries.map(async ({_id, count}) => {
                 const country = await Country.findOne({_id})
@@ -80,26 +87,26 @@ module.exports = {
                         percentage: (count/total*100).toFixed(2),
                     }
                 }
-            }).filter(id => id !== null)
+            })
         )
 
         res.json(items)
     },
 
     /**
-     * List publications by country id
+     * List publications
      * 
      * @param {*} req 
      * @param {*} res 
      */
-    async publications(req, res) {
+    async list(req, res) {
 
-        const { country } = req.params;
-        let { page, perPage, search } = req.query;
+        let { country, page, perPage, search } = req.query;
 
         page = page ? Number(page) : 1;
         perPage = perPage ? Number(perPage) : 10;
         search = search ? search : '';
+        country = country ? country : { $ne: null };
 
         const exp = new RegExp(`.*${search}.*`, 'gi');
         const publications = await Publication.find({ 
@@ -108,7 +115,7 @@ module.exports = {
         })
             .skip((page - 1) * perPage)
             .limit(perPage)
-            .select('_id pmc title affiliations')
+            .select('_id pmc title affiliations country')
             .exec()
 
         res.json(publications)
