@@ -3,11 +3,14 @@ import React, { useState, useEffect, useCallback } from 'react';
 import clsx from 'clsx';
 
 import { api, headers, googleMapURL } from '../../constants';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles, withStyles, useTheme  } from '@material-ui/core/styles'
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+
 import { 
     Box,
     CircularProgress,
 } from '@material-ui/core';
+
 
 import MapWithAMarker from './MapWithAMarker';
 import Publications from './Publications';
@@ -58,6 +61,8 @@ const Loading = (props) => {
 export default function Map() {
 
     const classes = useStyles();
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.up('md'));
 
     const [ keywords, setKeywords ] = useState([]);
     const [ showPublications, setShowPublications ] = useState(true);
@@ -97,12 +102,17 @@ export default function Map() {
         }
     }, [country, countries]);
 
+    useEffect(() => {
+        setShowPublications(!!matches);
+    }, [matches])
+
     const selectCountry = async (e, newContry=false) => {
         let keywords = [];
         if(newContry && newContry._id && newContry !== country) {
             keywords = await getKeywords(newContry);
             setKeywords(keywords);
         }
+        setShowPublications(matches);
         setCountry(newContry);
     }
 

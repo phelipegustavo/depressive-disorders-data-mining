@@ -55,12 +55,12 @@ export default class Charts extends Component {
                     flexWrap="wrap"
                     p={1}
                 >
-                    <Card style={{ margin: '5px' }}>
+                    <Card style={{ margin: '5px', minHeight: '510px' }}>
                         <CardContent>
                             <MiningChart data={this.state.mining}/>
                         </CardContent>
                     </Card>
-                    <Card style={{ margin: '5px' }}>
+                    <Card style={{ margin: '5px', minHeight: '510px' }}>
                         <CardContent>
                             <MiningCountries data={this.state.countries} isLoading={this.state.isLoading} />
                         </CardContent>
