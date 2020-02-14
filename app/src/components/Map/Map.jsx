@@ -29,8 +29,6 @@ const ColorCircularProgress = withStyles({
 })(CircularProgress);
 
 const Loading = (props) => {
-    
-    const classes = useStyles();
 
     return (
         <Box
@@ -86,7 +84,18 @@ export default function Map() {
 
     useEffect(() => {
         getCount();
-    }, [getCount])
+    }, [getCount]);
+
+    useEffect(() => {
+        if(country && country._id) {
+            const c = countries.find(({_id}) => country._id === _id);
+            if(c) {
+                setCountry(c);
+            } else {
+                setCountry(c => ({...c, count: 0}));
+            }
+        }
+    }, [country, countries]);
 
     const selectCountry = async (e, newContry=false) => {
         let keywords = [];

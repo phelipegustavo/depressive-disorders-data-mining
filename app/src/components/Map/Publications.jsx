@@ -14,10 +14,7 @@ import {
     Toolbar,
     TextField,
     Box,
-    CircularProgress,
 } from '@material-ui/core';
-
-import { withStyles } from '@material-ui/styles';
 
 import {
     Autocomplete,
@@ -35,12 +32,6 @@ const classes = {
         width: '600px',
     }
 }
-
-const ColorCircularProgress = withStyles({
-    root: {
-      color: '#6798e5',
-    },
-})(CircularProgress);
 
 const ListItemLink = (props) => (<ListItem button component="a" {...props} />);
 
@@ -162,17 +153,15 @@ export default class Publications extends Component {
                             )}
                     />
                 </Box>
-                { this.state.loading 
-                    ? <ColorCircularProgress size={50} thickness={5} />
-                    : <List component="ul" className="scroll" style={{width: '600px', overflowY: 'auto'}}>
-                        { this.state.publications.map((item, index) => (
-                            <ListItem key={index} button onClick={item.action} style={{ padding: 0 }}>
-                                <ListItemLink href={`https://www.ncbi.nlm.nih.gov/pmc/${item.pmc}/`} target="_blank" >
-                                    <ListItemText primary={item.title} secondary={item.affiliations ? item.affiliations[0].name : ''}/>
-                                </ListItemLink>
-                            </ListItem>
-                        )) }
-                    </List> }
+                <List component="ul" className="scroll" style={{width: '600px', overflowY: 'auto'}}>
+                    { this.state.publications.map((item, index) => (
+                        <ListItem key={index} button onClick={item.action} style={{ padding: 0 }}>
+                            <ListItemLink href={`https://www.ncbi.nlm.nih.gov/pmc/${item.pmc}/`} target="_blank" >
+                                <ListItemText primary={item.title} secondary={item.affiliations ? item.affiliations[0].name : ''}/>
+                            </ListItemLink>
+                        </ListItem>
+                    )) }
+                </List> 
             </Drawer>
         )
     }
