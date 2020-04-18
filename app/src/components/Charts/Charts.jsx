@@ -31,9 +31,10 @@ export default class Charts extends Component {
         const url = api('charts/list')
         const res = await fetch(url, headers);
         const {identifiedCountry, total, countries} = await res.json();
+        const undefinedCountry = total - identifiedCountry;
         const mining = [
-            { value: identifiedCountry,  name: 'Defined Country', color: '#00e676' },
-            { value: total - identifiedCountry,  name: 'Undefined Country', color: '#f50057' }
+            { value: identifiedCountry,  name: 'Defined Country', color: '#00e676', percentage: (identifiedCountry/total * 100).toFixed(2) },
+            { value: undefinedCountry,  name: 'Undefined Country', color: '#f50057',  percentage: (undefinedCountry/total * 100).toFixed(2) }
         ];
         this.setState({ 
             mining, 

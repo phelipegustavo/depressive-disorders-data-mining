@@ -60,7 +60,7 @@ export default class MiningChart extends Component {
                     >
                         { this.state.data.map(({color}, i) => <Cell key={i} fill={color} />) }
                     </Pie>
-                    <Tooltip formatter={(value, name, {payload}) => `${value}`}/>
+                    <Tooltip formatter={(value, name, {payload}) => `${value} (${payload.percentage}%)`}/>
                 </PieChart>
                 { this.state.data.map(mining => 
                     (<Box 
@@ -73,7 +73,7 @@ export default class MiningChart extends Component {
                         p={1}
                     >
                         <Stop style={{ color: mining.color }}/>
-                        <Trans i18nKey={mining.name} /> ({mining.value})
+                        <Trans i18nKey={mining.name} /> - {mining.value} ({mining.percentage}%)
                     </Box>) 
                 )}
             </React.Fragment>
