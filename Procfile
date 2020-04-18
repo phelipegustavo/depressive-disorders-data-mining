@@ -1,0 +1,1 @@
+web: echo "WEB" && cd app
