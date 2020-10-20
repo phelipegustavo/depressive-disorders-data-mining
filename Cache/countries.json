@@ -1,1502 +1,1502 @@
 [
     {
-        "_id": "5df6a2170975ff383f9af28e",
-        "regex": "armenia",
-        "name": "Republic of Armenia",
-        "code": "AM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af28b",
+        "_id": "5f1c56a8bf29657e0d4c1cd6",
         "regex": "andorra",
         "name": "Principality of Andorra",
         "code": "AD"
     },
     {
-        "_id": "5df6a2170975ff383f9af290",
-        "regex": "^(?=.*\\bant).*(neth.*|dutch)",
-        "name": "Netherlands Antilles",
-        "code": "AN"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af28d",
+        "_id": "5f1c56a8bf29657e0d4c1cda",
         "regex": "afghan",
         "name": "Islamic Republic of Afghanistan",
         "code": "AF"
     },
     {
-        "_id": "5df6a2170975ff383f9af28a",
-        "regex": "emirates|^u\\.?a\\.?e\\.?$|united.?arab.?em",
-        "name": "United Arab Emirates",
-        "code": "AE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af28f",
+        "_id": "5f1c56a8bf29657e0d4c1cd9",
         "regex": "anguill?a",
         "name": "Anguilla",
         "code": "AI"
     },
     {
-        "_id": "5df6a2170975ff383f9af28c",
+        "_id": "5f1c56a8bf29657e0d4c1cd8",
         "regex": "antigua",
         "name": "Antigua and Barbuda",
         "code": "AG"
     },
     {
-        "_id": "5df6a2170975ff383f9af291",
-        "regex": "albania",
-        "name": "Albanian Republic",
-        "code": "AL"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af292",
-        "regex": "antarctica",
-        "name": "Antarctica",
-        "code": "AQ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af293",
-        "regex": "azerbaijan",
-        "name": "Republic of Azerbaijan",
-        "code": "AZ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af295",
-        "regex": "bermuda",
-        "name": "Bermuda",
-        "code": "BM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af296",
-        "regex": "bhutan",
-        "name": "Kingdom of Bhutan",
-        "code": "BT"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af294",
-        "regex": "burkina|\\bfaso|upper.?volta",
-        "name": "Burkina Faso",
-        "code": "BF"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af298",
-        "regex": "\\bcook",
-        "name": "Cook Islands",
-        "code": "CK"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af297",
-        "regex": "canada",
-        "name": "Canada",
-        "code": "CA"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af299",
-        "regex": "costa.?rica",
-        "name": "Republic of Costa Rica",
-        "code": "CR"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af29a",
-        "regex": "^(?=.*rep).*czech.*|czechia|bohemia|.*czech.*",
-        "name": "Czech Republic",
-        "code": "CZ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af29b",
-        "regex": "dominican",
-        "name": "Dominican Republic",
-        "code": "DO"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af29c",
-        "regex": "\\bw.*sahara",
-        "name": "Western Sahara",
-        "code": "EH"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af29d",
-        "regex": "fiji",
-        "name": "Republic of Fiji",
-        "code": "FJ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af29e",
-        "regex": ".*(ivoire|ivory)",
-        "name": "Republic of C\u00f4te d'Ivoire",
-        "code": "CI"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2a3",
-        "regex": "^(?!north.*)ireland",
-        "name": "Ireland",
-        "code": "IE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2a8",
-        "regex": "liechtenstein",
-        "name": "Principality of Liechtenstein",
-        "code": "LI"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af29f",
-        "regex": "ghana|gold.?coast",
-        "name": "Republic of Ghana",
-        "code": "GH"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2a0",
-        "regex": "guadeloupe",
-        "name": "Guadeloupe",
-        "code": "GP"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2a4",
-        "regex": "\\biran|persia",
-        "name": "Islamic Republic of Iran",
-        "code": "IR"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2a1",
-        "regex": "\\bguam",
-        "name": "Territory of Guam",
-        "code": "GU"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2a2",
-        "regex": "^(?!.*brit).*honduras",
-        "name": "Republic of Honduras",
-        "code": "HN"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2a6",
-        "regex": "comoro",
-        "name": "Union of the Comoros",
-        "code": "KM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2a7",
-        "regex": "cayman",
-        "name": "Cayman Islands",
-        "code": "KY"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2a5",
-        "regex": "japan",
-        "name": "Japan",
-        "code": "JP"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2aa",
-        "regex": "moldov|b(a|e)ssarabia",
-        "name": "Republic of Moldova",
-        "code": "MD"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2af",
-        "regex": "bangladesh|^(?=.*east).*paki?stan",
-        "name": "People's Republic of Bangladesh",
-        "code": "BD"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2b4",
-        "regex": "^(?!repub)(?!taiwan)(?!hong.*kong)(?!macao).*china(?!.*hong.*kong)(?!.*macao)|^PRC$",
-        "name": "People's Republic of China",
-        "code": "CN"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2ac",
-        "regex": "martinique",
-        "name": "Martinique",
-        "code": "MQ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2b9",
-        "regex": "faroe|faeroe",
-        "name": "Faroe Islands",
-        "code": "FO"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2b1",
-        "regex": "brazil",
-        "name": "Federative Republic of Brazil",
-        "code": "BR"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2a9",
-        "regex": "^(?!.*belg).*luxem",
-        "name": "Grand Duchy of Luxembourg",
-        "code": "LU"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2b6",
-        "regex": "denmark",
-        "name": "Kingdom of Denmark",
-        "code": "DK"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2bb",
-        "regex": "gambia",
-        "name": "Republic of The Gambia",
-        "code": "GM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2ad",
+        "_id": "5f1c56a8bf29657e0d4c1cdb",
         "regex": "angola",
         "name": "Angola",
         "code": "AO"
     },
     {
-        "_id": "5df6a2170975ff383f9af2ae",
-        "regex": "australia",
-        "name": "Commonwealth of Australia",
-        "code": "AU"
+        "_id": "5f1c56a8bf29657e0d4c1cde",
+        "regex": "albania",
+        "name": "Albanian Republic",
+        "code": "AL"
     },
     {
-        "_id": "5df6a2170975ff383f9af2b2",
-        "regex": "belarus|byelo",
-        "name": "Republic of Belarus",
-        "code": "BY"
+        "_id": "5f1c56a8bf29657e0d4c1cdd",
+        "regex": "armenia",
+        "name": "Republic of Armenia",
+        "code": "AM"
     },
     {
-        "_id": "5df6a2170975ff383f9af2be",
-        "regex": "hungary",
-        "name": "Hungary",
-        "code": "HU"
+        "_id": "5f1c56a8bf29657e0d4c1cd7",
+        "regex": "emirates|^u\\.?a\\.?e\\.?$|united.?arab.?em",
+        "name": "United Arab Emirates",
+        "code": "AE"
     },
     {
-        "_id": "5df6a2170975ff383f9af2b3",
-        "regex": "^(?!.*\\bdem)(?!.*\\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l\\w{1,2}opoldville)(?!.*free)(^rep.*).*\\bcongo.*(?!.*\\bdem)(?!.*\\bdr).*|\\bwest.*congo|^congo.+republic$|^congo.+rep\\.$|^congo$|\\bcongo.*brazza.*",
-        "name": "Republic of the Congo",
-        "code": "CG"
+        "_id": "5f1c56a8bf29657e0d4c1cdc",
+        "regex": "^(?=.*\\bant).*(neth.*|dutch)",
+        "name": "Netherlands Antilles",
+        "code": "AN"
     },
     {
-        "_id": "5df6a2170975ff383f9af2b7",
-        "regex": "estonia",
-        "name": "Republic of Estonia",
-        "code": "EE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2b8",
-        "regex": "ethiopia|abyssinia",
-        "name": "Federal Democratic Republic of Ethiopia",
-        "code": "ET"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2bc",
-        "regex": "south.?georgia|sandwich",
-        "name": "South Georgia and the South Sandwich Islands",
-        "code": "GS"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2bd",
-        "regex": ".*hong.*kong",
-        "name": "Hong Kong Special Administrative Region",
-        "code": "HK"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2ab",
-        "regex": "\\bmali\\b",
-        "name": "Republic of Mali",
-        "code": "ML"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2b0",
-        "regex": "burundi",
-        "name": "Republic of Burundi",
-        "code": "BI"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2b5",
-        "regex": "christmas",
-        "name": "Territory of Christmas Island",
-        "code": "CX"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2ba",
-        "regex": "^(?!.*south).*georgia",
-        "name": "Georgia",
-        "code": "GE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2bf",
-        "regex": "br.*indian.?ocean",
-        "name": "British Indian Ocean Territory",
-        "code": "IO"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2c4",
-        "regex": "lesotho|basuto",
-        "name": "Kingdom of Lesotho",
-        "code": "LS"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2c9",
-        "regex": "malaysia",
-        "name": "Malaysia",
-        "code": "MY"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2c2",
-        "regex": "^(?!.*dem)(?!.*peo)(?!.*nor).*\\bkorea|\\br\\.?o\\.?k\\b",
-        "name": "Republic of Korea",
-        "code": "KR"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2c0",
-        "regex": "jamaica",
-        "name": "Jamaica",
-        "code": "JM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2c5",
-        "regex": "morocco|\\bmaroc",
-        "name": "Kingdom of Morocco",
-        "code": "MA"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2ca",
-        "regex": "norfolk",
-        "name": "Territory of Norfolk Island",
-        "code": "NF"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2cf",
-        "regex": "r(o|u|ou)mania",
-        "name": "Romania",
-        "code": "RO"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2d4",
-        "regex": "togo",
-        "name": "Togolese Republic",
-        "code": "TG"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2c7",
-        "regex": ".*maca(o|u)",
-        "name": "Macau Special Administrative Region",
-        "code": "MO"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2c3",
-        "regex": "lebanon|lebanese",
-        "name": "Lebanese Republic",
-        "code": "LB"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2c8",
-        "regex": "\\bmalta",
-        "name": "Republic of Malta",
-        "code": "MT"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2cd",
-        "regex": "^(?!.*east).*paki?stan",
-        "name": "Islamic Republic of Pakistan",
-        "code": "PK"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2c1",
-        "regex": "cambodia|kampuchea|khmer|^p\\.?r\\.?k\\.?$",
-        "name": "Kingdom of Cambodia",
-        "code": "KH"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2d2",
-        "regex": "senegal",
-        "name": "Republic of Senegal",
-        "code": "SN"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2d7",
-        "regex": ".*(united.?kingdom|britain|^u\\.?k\\.?$|GB)",
-        "name": "United Kingdom",
-        "code": "GB"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2cc",
-        "regex": "panama",
-        "name": "Republic of Panama",
-        "code": "PA"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2dc",
-        "regex": "^(?=.*bonaire).*eustatius|^(?=.*carib).*netherlands|\\bbes.?islands",
-        "name": "Bonaire",
-        "code": "BQ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2e1",
-        "regex": "benin|dahome",
-        "name": "Republic of Benin",
-        "code": "BJ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2e6",
-        "regex": "cyprus",
-        "name": "Republic of Cyprus",
-        "code": "CY"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2c6",
-        "regex": "macedonia|^f\\.?y\\.?r\\.?o\\.?m\\.?$",
-        "name": "Republic of Macedonia",
-        "code": "MK"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2ce",
-        "regex": "portugal|portuguese",
-        "name": "Portuguese Republic",
-        "code": "PT"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2eb",
-        "regex": "^(?=.*french).*guiana|guiana",
-        "name": "Guiana",
-        "code": "GF"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2d1",
-        "regex": "slovenia",
-        "name": "Republic of Slovenia",
-        "code": "SI"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2d9",
-        "regex": "vanuatu|new.?hebrides",
-        "name": "Republic of Vanuatu",
-        "code": "VU"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2f0",
-        "regex": "\\biraq|mesopotamia",
-        "name": "Republic of Iraq",
-        "code": "IQ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2cb",
-        "regex": "nepal",
-        "name": "Federal Democratic Republic of Nepal",
-        "code": "NP"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2d6",
-        "regex": "tuvalu",
-        "name": "Tuvalu",
-        "code": "TV"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2d3",
-        "regex": "syria",
-        "name": "Syrian Arab Republic",
-        "code": "SY"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2f5",
-        "regex": "lithuania",
-        "name": "Republic of Lithuania",
-        "code": "LT"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2d0",
-        "regex": "seychell",
-        "name": "Republic of Seychelles",
-        "code": "SC"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2de",
-        "regex": "austria",
-        "name": "Republic of Austria",
-        "code": "AT"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2db",
-        "regex": "\\b(a|\u00e5)land",
-        "name": "\u00c5land Islands",
-        "code": "AX"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2fa",
-        "regex": "mozambique",
-        "name": "Republic of Mozambique",
-        "code": "MZ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2d5",
-        "regex": "tunisia",
-        "name": "Republic of Tunisia",
-        "code": "TN"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2ff",
-        "regex": "palau",
-        "name": "Republic of Palau",
-        "code": "PW"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2e0",
-        "regex": "^(?!.*luxem).*belgium",
-        "name": "Kingdom of Belgium",
-        "code": "BE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af304",
-        "regex": "swaziland|eswatini",
-        "name": "Kingdom of Swaziland",
-        "code": "SZ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2da",
-        "regex": "\\bs(\\.|outh).*africa",
-        "name": "Republic of South Africa",
-        "code": "ZA"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2e3",
-        "regex": "belize|^(?=.*british).*honduras",
-        "name": "Belize",
-        "code": "BZ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2d8",
-        "regex": "vincent",
-        "name": "Saint Vincent and the Grenadines",
-        "code": "VC"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af30e",
-        "regex": "kosovo",
-        "name": "Republic of Kosovo",
-        "code": "XK"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2e5",
-        "regex": "colombia",
-        "name": "Republic of Colombia",
-        "code": "CO"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2df",
-        "regex": "^(?!.*bonaire).*\\baruba",
-        "name": "Aruba",
-        "code": "AW"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af313",
-        "regex": "bouvet",
-        "name": "Bouvet Island",
-        "code": "BV"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2e8",
-        "regex": "egypt",
-        "name": "Arab Republic of Egypt",
-        "code": "EG"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af318",
-        "regex": "algeria",
-        "name": "People's Democratic Republic of Algeria",
-        "code": "DZ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2ea",
-        "regex": "^(?!.*\\bdep).*france|french.?republic|\\bgaul",
-        "name": "French Republic",
-        "code": "FR"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2ed",
-        "regex": "guatemala",
-        "name": "Republic of Guatemala",
-        "code": "GT"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af31d",
-        "regex": "guine.*eq|eq.*guine|^(?=.*span).*guinea",
-        "name": "Republic of Equatorial Guinea",
-        "code": "GQ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2e4",
-        "regex": "switz|swiss",
-        "name": "Swiss Confederation",
-        "code": "CH"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2dd",
-        "regex": "\\bs\\w*.?sudan",
-        "name": "Republic of South Sudan",
-        "code": "SS"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2f2",
-        "regex": "kiribati",
-        "name": "Republic of Kiribati",
-        "code": "KI"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af322",
-        "regex": "kenya|british.?east.?africa|east.?africa.?prot",
-        "name": "Republic of Kenya",
-        "code": "KE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2ef",
-        "regex": "indonesia",
-        "name": "Republic of Indonesia",
-        "code": "ID"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2e9",
-        "regex": "finland",
-        "name": "Republic of Finland",
-        "code": "FI"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2e2",
-        "regex": "bahamas",
-        "name": "Commonwealth of the Bahamas",
-        "code": "BS"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2f7",
-        "regex": "^(?!.*maarten)(?!.*saba)(?!.*dutch).*martin\\b",
-        "name": "Collectivity of Saint Martin",
-        "code": "MF"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af327",
-        "regex": "madagascar|malagasy",
-        "name": "Republic of Madagascar",
-        "code": "MG"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2f4",
-        "regex": "\\blucia",
-        "name": "Saint Lucia",
-        "code": "LC"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2ee",
-        "regex": "heard.*mc.*donald",
-        "name": "Territory of Heard Island and Mcdonald Islands",
-        "code": "HM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2e7",
-        "regex": "dominica(?!n)",
-        "name": "Commonwealth of Dominica",
-        "code": "DM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2fc",
-        "regex": "nauru",
-        "name": "Republic of Nauru",
-        "code": "NR"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af32c",
-        "regex": "^(?!.*\\bant)(?!.*\\bcarib).*netherlands",
-        "name": "Netherlands",
-        "code": "NL"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2f9",
-        "regex": "mauritius",
-        "name": "Republic of Mauritius",
-        "code": "MU"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2f3",
-        "regex": "kuwait",
-        "name": "State of Kuwait",
-        "code": "KW"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2ec",
-        "regex": "^(?!.*eq)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*new).*guinea",
-        "name": "Republic of Guinea",
-        "code": "GN"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af301",
-        "regex": "^(?!.*\\bs(?!u)).*sudan",
-        "name": "Republic of the Sudan",
-        "code": "SD"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af331",
-        "regex": "\\bsa\\w*.?arabia",
-        "name": "Kingdom of Saudi Arabia",
-        "code": "SA"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2fe",
-        "regex": "poland",
-        "name": "Republic of Poland",
-        "code": "PL"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2f8",
-        "regex": "mariana",
-        "name": "Commonwealth of the Northern Mariana Islands",
-        "code": "MP"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af303",
-        "regex": "somali",
-        "name": "Federal Republic of Somalia",
-        "code": "SO"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af336",
-        "regex": "tokelau",
-        "name": "Tokelau",
-        "code": "TK"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af308",
-        "regex": "^(?!.*islands).*united.?states|^u\\.?s\\.?a\\.?$|^u\\.?s\\.?$",
-        "name": "United States of America",
-        "code": "US"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2f1",
-        "regex": "jordan",
-        "name": "The Hashemite Kingdom of Jordan",
-        "code": "JO"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2fd",
-        "regex": "peru",
-        "name": "Republic of Peru",
-        "code": "PE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af30d",
-        "regex": "^(?=.*isle).*\\bman",
-        "name": "Isle of Man",
-        "code": "IM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af33b",
-        "regex": "yemen",
-        "name": "Republic of Yemen",
-        "code": "YE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af302",
-        "regex": "^(?!norway).*svalbard",
-        "name": "Svalbard and Jan Mayen Islands",
-        "code": "SJ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af312",
-        "regex": "brunei",
-        "name": "Nation of Brunei, the Abode of Peace",
-        "code": "BN"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af306",
-        "regex": "tonga",
-        "name": "Kingdom of Tonga",
-        "code": "TO"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af340",
-        "regex": "barbados",
-        "name": "Barbados",
-        "code": "BB"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2f6",
-        "regex": "monaco",
-        "name": "Principality of Monaco",
-        "code": "MC"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af307",
-        "regex": ".*taiwan|.*taipei|.*formosa|^(?!.*\\bdem)(?!.*\\bpe)(?!.*\\bdr)(^rep.*).*\\bchina.*(?!.*\\bdem.*)(?!\\bpe.*)(?!.*\\bdr.*).*|^ROC$",
-        "name": "Republic of China",
-        "code": "TW"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af317",
-        "regex": "^(?!e|w)(fed)?.*germany(?!,? *e|,? *w)(,? *)(\\bfed)?",
-        "name": "Federal Republic of Germany",
-        "code": "DE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af30b",
-        "regex": "zambia|northern.?rhodesia",
-        "name": "Republic of Zambia",
-        "code": "ZM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af345",
-        "regex": "cameroon",
-        "name": "Republic of Cameroon",
-        "code": "CM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af2fb",
-        "regex": "nigeria",
-        "name": "Federal Republic of Nigeria",
-        "code": "NG"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af30c",
-        "regex": "palestin|\\bgaza|west.?bank",
-        "name": "State of Palestine",
-        "code": "PS"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af31c",
-        "regex": "gibraltar",
-        "name": "Gibraltar",
-        "code": "GI"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af310",
-        "regex": "herzegovina|bosnia",
-        "name": "Bosnia and Herzegovina",
-        "code": "BA"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af34a",
-        "regex": "micronesia",
-        "name": "Federated States of Micronesia",
-        "code": "FM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af300",
-        "regex": "\\brussia",
-        "name": "Russian Federation",
-        "code": "RU"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af311",
-        "regex": "bulgaria",
-        "name": "Republic of Bulgaria",
-        "code": "BG"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af321",
-        "regex": "iceland",
-        "name": "Iceland",
-        "code": "IS"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af315",
-        "regex": "\\bchile",
-        "name": "Republic of Chile",
-        "code": "CL"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af31a",
-        "regex": "falkland|malvinas",
-        "name": "Falkland Islands (Islas Malvinas)",
-        "code": "FK"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af305",
-        "regex": "thailand|\\bsiam",
-        "name": "Kingdom of Thailand",
-        "code": "TH"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af31f",
-        "regex": "croatia|hrvatska",
-        "name": "Republic of Croatia",
-        "code": "HR"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af316",
-        "regex": "\\bcuba",
-        "name": "Republic of Cuba",
-        "code": "CU"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af34f",
-        "regex": "(ha(i|\\xef|\\xc3\\xaf)ti)",
-        "name": "Republic of Haiti",
-        "code": "HT"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af324",
-        "regex": "kazak",
-        "name": "Republic of Kazakhstan",
-        "code": "KZ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af329",
-        "regex": "mauritania",
-        "name": "Islamic Republic of Mauritania",
-        "code": "MR"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af30a",
-        "regex": "futuna|wallis",
-        "name": "Territory of the Wallis and Futuna Islands",
-        "code": "WF"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af326",
-        "regex": "latvia",
-        "name": "Republic of Latvia",
-        "code": "LV"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af32e",
-        "regex": "papua|\\bp.*\\bn.*\\bguin.*|^p\\.?n\\.?g\\.?$|new.?guinea",
-        "name": "Independent State of Papua New Guinea",
-        "code": "PG"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af333",
-        "regex": "sierra",
-        "name": "Republic of Sierra Leone",
-        "code": "SL"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af31b",
-        "regex": "gabon",
-        "name": "Gabonese Republic",
-        "code": "GA"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af30f",
+        "_id": "5f1c56a8bf29657e0d4c1cdf",
         "regex": "argentin",
         "name": "Argentine Republic",
         "code": "AR"
     },
     {
-        "_id": "5df6a2170975ff383f9af338",
-        "regex": "ukrain",
-        "name": "Ukraine",
-        "code": "UA"
+        "_id": "5f1c56a8bf29657e0d4c1ce0",
+        "regex": "bangladesh|^(?=.*east).*paki?stan",
+        "name": "People's Republic of Bangladesh",
+        "code": "BD"
     },
     {
-        "_id": "5df6a2170975ff383f9af354",
-        "regex": "\\blaos?\\b",
-        "name": "Lao People\u2019s Democratic Republic",
-        "code": "LA"
+        "_id": "5f1c56a8bf29657e0d4c1ce1",
+        "regex": "burundi",
+        "name": "Republic of Burundi",
+        "code": "BI"
     },
     {
-        "_id": "5df6a2170975ff383f9af32b",
-        "regex": "new.?caledonia",
-        "name": "New Caledonia",
-        "code": "NC"
+        "_id": "5f1c56a8bf29657e0d4c1ce2",
+        "regex": "brazil",
+        "name": "Federative Republic of Brazil",
+        "code": "BR"
     },
     {
-        "_id": "5df6a2170975ff383f9af320",
-        "regex": "israel",
-        "name": "State of Israel",
-        "code": "IL"
+        "_id": "5f1c56a8bf29657e0d4c1ce3",
+        "regex": "belarus|byelo",
+        "name": "Republic of Belarus",
+        "code": "BY"
     },
     {
-        "_id": "5df6a2170975ff383f9af314",
-        "regex": "\\bcocos|keeling",
-        "name": "Territory of the Cocos (Keeling) Islands",
-        "code": "CC"
+        "_id": "5f1c56a8bf29657e0d4c1ce4",
+        "regex": "^(?!.*\\bdem)(?!.*\\bdr)(?!.*kinshasa)(?!.*zaire)(?!.*belg)(?!.*l\\w{1,2}opoldville)(?!.*free)(^rep.*).*\\bcongo.*(?!.*\\bdem)(?!.*\\bdr).*|\\bwest.*congo|^congo.+republic$|^congo.+rep\\.$|^congo$|\\bcongo.*brazza.*",
+        "name": "Republic of the Congo",
+        "code": "CG"
     },
     {
-        "_id": "5df6a2170975ff383f9af33d",
-        "regex": "\\bcura(c|\u00e7)ao",
-        "name": "Cura\u00e7ao",
-        "code": "CW"
+        "_id": "5f1c56a8bf29657e0d4c1ce5",
+        "regex": "^(?!repub)(?!taiwan)(?!hong.*kong)(?!macao).*china(?!.*hong.*kong)(?!.*macao)|^PRC$",
+        "name": "People's Republic of China",
+        "code": "CN"
     },
     {
-        "_id": "5df6a2170975ff383f9af359",
-        "regex": "montserrat",
-        "name": "Montserrat",
-        "code": "MS"
+        "_id": "5f1c56a8bf29657e0d4c1ce6",
+        "regex": "christmas",
+        "name": "Territory of Christmas Island",
+        "code": "CX"
     },
     {
-        "_id": "5df6a2170975ff383f9af330",
-        "regex": "qatar",
-        "name": "State of Qatar",
-        "code": "QA"
+        "_id": "5f1c56a8bf29657e0d4c1ce7",
+        "regex": "denmark",
+        "name": "Kingdom of Denmark",
+        "code": "DK"
     },
     {
-        "_id": "5df6a2170975ff383f9af325",
-        "regex": "sri.?lanka|ceylon",
-        "name": "Democratic Socialist Republic of Sri Lanka",
-        "code": "LK"
+        "_id": "5f1c56a8bf29657e0d4c1ce8",
+        "regex": "estonia",
+        "name": "Republic of Estonia",
+        "code": "EE"
     },
     {
-        "_id": "5df6a2170975ff383f9af35e",
-        "regex": "philippines",
-        "name": "Republic of the Philippines",
-        "code": "PH"
+        "_id": "5f1c56a8bf29657e0d4c1ce9",
+        "regex": "ethiopia|abyssinia",
+        "name": "Federal Democratic Republic of Ethiopia",
+        "code": "ET"
     },
     {
-        "_id": "5df6a2170975ff383f9af335",
-        "regex": "\\bchad",
-        "name": "Republic of Chad",
-        "code": "TD"
+        "_id": "5f1c56a8bf29657e0d4c1cea",
+        "regex": "faroe|faeroe",
+        "name": "Faroe Islands",
+        "code": "FO"
     },
     {
-        "_id": "5df6a2170975ff383f9af363",
-        "regex": "san.?marino",
-        "name": "Republic of San Marino",
-        "code": "SM"
+        "_id": "5f1c56a8bf29657e0d4c1ceb",
+        "regex": "^(?!.*south).*georgia",
+        "name": "Georgia",
+        "code": "GE"
     },
     {
-        "_id": "5df6a2170975ff383f9af32a",
-        "regex": "malawi|nyasa",
-        "name": "Republic of Malawi",
-        "code": "MW"
+        "_id": "5f1c56a8bf29657e0d4c1cec",
+        "regex": "gambia",
+        "name": "Republic of The Gambia",
+        "code": "GM"
     },
     {
-        "_id": "5df6a2170975ff383f9af319",
-        "regex": "eritrea",
-        "name": "State of Eritrea",
-        "code": "ER"
+        "_id": "5f1c56a8bf29657e0d4c1ced",
+        "regex": "south.?georgia|sandwich",
+        "name": "South Georgia and the South Sandwich Islands",
+        "code": "GS"
     },
     {
-        "_id": "5df6a2170975ff383f9af368",
-        "regex": "uganda",
-        "name": "Republic of Uganda",
-        "code": "UG"
+        "_id": "5f1c56a8bf29657e0d4c1cee",
+        "regex": ".*hong.*kong",
+        "name": "Hong Kong Special Administrative Region",
+        "code": "HK"
     },
     {
-        "_id": "5df6a2170975ff383f9af342",
-        "regex": "bolivia",
-        "name": "Plurinational State of Bolivia",
-        "code": "BO"
+        "_id": "5f1c56a8bf29657e0d4c1cef",
+        "regex": "hungary",
+        "name": "Hungary",
+        "code": "HU"
     },
     {
-        "_id": "5df6a2170975ff383f9af36d",
-        "regex": "^(?!.*martin)(?!.*saba).*maarten|dutch.*martin|martin.*dutch",
-        "name": "Sint Maarten",
-        "code": "SX"
+        "_id": "5f1c56a8bf29657e0d4c1cf0",
+        "regex": "br.*indian.?ocean",
+        "name": "British Indian Ocean Territory",
+        "code": "IO"
     },
     {
-        "_id": "5df6a2170975ff383f9af32f",
-        "regex": "pitcairn",
-        "name": "Pitcairn, Henderson, Ducie and Oeno Islands",
-        "code": "PN"
+        "_id": "5f1c56a8bf29657e0d4c1cf1",
+        "regex": "jamaica",
+        "name": "Jamaica",
+        "code": "JM"
     },
     {
-        "_id": "5df6a2170975ff383f9af33a",
-        "regex": "^(?=.*\\bu\\.?\\s?s).*virgin|^(?=.*states).*virgin",
-        "name": "U.S. Virgin Islands",
-        "code": "VI"
+        "_id": "5f1c56a8bf29657e0d4c1cf2",
+        "regex": "cambodia|kampuchea|khmer|^p\\.?r\\.?k\\.?$",
+        "name": "Kingdom of Cambodia",
+        "code": "KH"
     },
     {
-        "_id": "5df6a2170975ff383f9af31e",
-        "regex": "^(.*portu).*guinea|guinea.*bissau",
-        "name": "Republic of Guinea-Bissau",
-        "code": "GW"
+        "_id": "5f1c56a8bf29657e0d4c1cf3",
+        "regex": "^(?!.*dem)(?!.*peo)(?!.*nor).*\\bkorea|\\br\\.?o\\.?k\\b",
+        "name": "Republic of Korea",
+        "code": "KR"
     },
     {
-        "_id": "5df6a2170975ff383f9af347",
-        "regex": "djibouti",
-        "name": "Republic of Djibouti",
-        "code": "DJ"
+        "_id": "5f1c56a8bf29657e0d4c1cf4",
+        "regex": "lebanon|lebanese",
+        "name": "Lebanese Republic",
+        "code": "LB"
     },
     {
-        "_id": "5df6a2170975ff383f9af334",
-        "regex": "tome|tom\u00c3\u00a9",
-        "name": "Democratic Republic of S\u00e3o Tom\u00e9 and Pr\u00edncipe",
-        "code": "ST"
+        "_id": "5f1c56a8bf29657e0d4c1cf5",
+        "regex": "lesotho|basuto",
+        "name": "Kingdom of Lesotho",
+        "code": "LS"
     },
     {
-        "_id": "5df6a2170975ff383f9af33f",
+        "_id": "5f1c56a8bf29657e0d4c1cf6",
+        "regex": "morocco|\\bmaroc",
+        "name": "Kingdom of Morocco",
+        "code": "MA"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1cf7",
+        "regex": "macedonia|^f\\.?y\\.?r\\.?o\\.?m\\.?$",
+        "name": "Republic of Macedonia",
+        "code": "MK"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1cf8",
+        "regex": ".*maca(o|u)",
+        "name": "Macau Special Administrative Region",
+        "code": "MO"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1cf9",
+        "regex": "\\bmalta",
+        "name": "Republic of Malta",
+        "code": "MT"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1cfa",
+        "regex": "malaysia",
+        "name": "Malaysia",
+        "code": "MY"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1cfb",
+        "regex": "norfolk",
+        "name": "Territory of Norfolk Island",
+        "code": "NF"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1cfc",
+        "regex": "nepal",
+        "name": "Federal Democratic Republic of Nepal",
+        "code": "NP"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1cfd",
+        "regex": "panama",
+        "name": "Republic of Panama",
+        "code": "PA"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1cfe",
+        "regex": "^(?!.*east).*paki?stan",
+        "name": "Islamic Republic of Pakistan",
+        "code": "PK"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1cff",
+        "regex": "portugal|portuguese",
+        "name": "Portuguese Republic",
+        "code": "PT"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d00",
+        "regex": "r(o|u|ou)mania",
+        "name": "Romania",
+        "code": "RO"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d01",
+        "regex": "seychell",
+        "name": "Republic of Seychelles",
+        "code": "SC"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d02",
+        "regex": "slovenia",
+        "name": "Republic of Slovenia",
+        "code": "SI"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d03",
+        "regex": "senegal",
+        "name": "Republic of Senegal",
+        "code": "SN"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d04",
+        "regex": "syria",
+        "name": "Syrian Arab Republic",
+        "code": "SY"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d05",
+        "regex": "togo",
+        "name": "Togolese Republic",
+        "code": "TG"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d06",
+        "regex": "tunisia",
+        "name": "Republic of Tunisia",
+        "code": "TN"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d07",
+        "regex": "tuvalu",
+        "name": "Tuvalu",
+        "code": "TV"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d08",
+        "regex": ".*(united.?kingdom|britain|^u\\.?k\\.?$|GB)",
+        "name": "United Kingdom",
+        "code": "GB"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d09",
+        "regex": "vincent",
+        "name": "Saint Vincent and the Grenadines",
+        "code": "VC"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d0a",
+        "regex": "vanuatu|new.?hebrides",
+        "name": "Republic of Vanuatu",
+        "code": "VU"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d0b",
+        "regex": "\\bs(\\.|outh).*africa",
+        "name": "Republic of South Africa",
+        "code": "ZA"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d0c",
+        "regex": "\\b(a|å)land",
+        "name": "Åland Islands",
+        "code": "AX"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d0d",
+        "regex": "^(?=.*bonaire).*eustatius|^(?=.*carib).*netherlands|\\bbes.?islands",
+        "name": "Bonaire",
+        "code": "BQ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d0e",
+        "regex": "\\bs\\w*.?sudan",
+        "name": "Republic of South Sudan",
+        "code": "SS"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d0f",
+        "regex": "antarctica",
+        "name": "Antarctica",
+        "code": "AQ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d10",
+        "regex": "^(?!.*bonaire).*\\baruba",
+        "name": "Aruba",
+        "code": "AW"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d11",
+        "regex": "^(?!.*luxem).*belgium",
+        "name": "Kingdom of Belgium",
+        "code": "BE"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d12",
+        "regex": "benin|dahome",
+        "name": "Republic of Benin",
+        "code": "BJ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d13",
+        "regex": "bahamas",
+        "name": "Commonwealth of the Bahamas",
+        "code": "BS"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d14",
+        "regex": "belize|^(?=.*british).*honduras",
+        "name": "Belize",
+        "code": "BZ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d15",
+        "regex": "switz|swiss",
+        "name": "Swiss Confederation",
+        "code": "CH"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d16",
+        "regex": "colombia",
+        "name": "Republic of Colombia",
+        "code": "CO"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d17",
+        "regex": "cyprus",
+        "name": "Republic of Cyprus",
+        "code": "CY"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d18",
+        "regex": "dominica(?!n)",
+        "name": "Commonwealth of Dominica",
+        "code": "DM"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d19",
+        "regex": "egypt",
+        "name": "Arab Republic of Egypt",
+        "code": "EG"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d1a",
+        "regex": "finland",
+        "name": "Republic of Finland",
+        "code": "FI"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d1b",
+        "regex": "^(?!.*\\bdep).*france|french.?republic|\\bgaul",
+        "name": "French Republic",
+        "code": "FR"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d1c",
+        "regex": "^(?=.*french).*guiana|guiana",
+        "name": "Guiana",
+        "code": "GF"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d1d",
+        "regex": "^(?!.*eq)(?!.*span)(?!.*bissau)(?!.*portu)(?!.*new).*guinea",
+        "name": "Republic of Guinea",
+        "code": "GN"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d1e",
+        "regex": "guatemala",
+        "name": "Republic of Guatemala",
+        "code": "GT"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d1f",
+        "regex": "heard.*mc.*donald",
+        "name": "Territory of Heard Island and Mcdonald Islands",
+        "code": "HM"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d20",
+        "regex": "indonesia",
+        "name": "Republic of Indonesia",
+        "code": "ID"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d21",
+        "regex": "\\biraq|mesopotamia",
+        "name": "Republic of Iraq",
+        "code": "IQ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d22",
+        "regex": "jordan",
+        "name": "The Hashemite Kingdom of Jordan",
+        "code": "JO"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d23",
+        "regex": "kiribati",
+        "name": "Republic of Kiribati",
+        "code": "KI"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d24",
+        "regex": "kuwait",
+        "name": "State of Kuwait",
+        "code": "KW"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d25",
+        "regex": "\\blucia",
+        "name": "Saint Lucia",
+        "code": "LC"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d26",
+        "regex": "lithuania",
+        "name": "Republic of Lithuania",
+        "code": "LT"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d27",
+        "regex": "monaco",
+        "name": "Principality of Monaco",
+        "code": "MC"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d28",
+        "regex": "^(?!.*maarten)(?!.*saba)(?!.*dutch).*martin\\b",
+        "name": "Collectivity of Saint Martin",
+        "code": "MF"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d29",
+        "regex": "mariana",
+        "name": "Commonwealth of the Northern Mariana Islands",
+        "code": "MP"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d2a",
+        "regex": "mauritius",
+        "name": "Republic of Mauritius",
+        "code": "MU"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d2b",
+        "regex": "mozambique",
+        "name": "Republic of Mozambique",
+        "code": "MZ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d2c",
+        "regex": "nigeria",
+        "name": "Federal Republic of Nigeria",
+        "code": "NG"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d2d",
+        "regex": "nauru",
+        "name": "Republic of Nauru",
+        "code": "NR"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d2e",
+        "regex": "peru",
+        "name": "Republic of Peru",
+        "code": "PE"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d2f",
+        "regex": "poland",
+        "name": "Republic of Poland",
+        "code": "PL"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d30",
+        "regex": "palau",
+        "name": "Republic of Palau",
+        "code": "PW"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d31",
+        "regex": "\\brussia",
+        "name": "Russian Federation",
+        "code": "RU"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d32",
+        "regex": "^(?!.*\\bs(?!u)).*sudan",
+        "name": "Republic of the Sudan",
+        "code": "SD"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d33",
+        "regex": "^(?!norway).*svalbard",
+        "name": "Svalbard and Jan Mayen Islands",
+        "code": "SJ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d34",
+        "regex": "somali",
+        "name": "Federal Republic of Somalia",
+        "code": "SO"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d35",
+        "regex": "swaziland|eswatini",
+        "name": "Kingdom of Swaziland",
+        "code": "SZ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d36",
+        "regex": "thailand|\\bsiam",
+        "name": "Kingdom of Thailand",
+        "code": "TH"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d37",
+        "regex": "tonga",
+        "name": "Kingdom of Tonga",
+        "code": "TO"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d38",
+        "regex": ".*taiwan|.*taipei|.*formosa|^(?!.*\\bdem)(?!.*\\bpe)(?!.*\\bdr)(^rep.*).*\\bchina.*(?!.*\\bdem.*)(?!\\bpe.*)(?!.*\\bdr.*).*|^ROC$",
+        "name": "Republic of China",
+        "code": "TW"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d39",
+        "regex": "^(?!.*islands).*united.?states|^u\\.?s\\.?a\\.?$|^u\\.?s\\.?$",
+        "name": "United States of America",
+        "code": "US"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d3a",
+        "regex": "venezuela",
+        "name": "Bolivarian Republic of Venezuela",
+        "code": "VE"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d3b",
+        "regex": "futuna|wallis",
+        "name": "Territory of the Wallis and Futuna Islands",
+        "code": "WF"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d3c",
+        "regex": "zambia|northern.?rhodesia",
+        "name": "Republic of Zambia",
+        "code": "ZM"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d3d",
+        "regex": "palestin|\\bgaza|west.?bank",
+        "name": "State of Palestine",
+        "code": "PS"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d3e",
+        "regex": "^(?=.*isle).*\\bman",
+        "name": "Isle of Man",
+        "code": "IM"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d3f",
+        "regex": "kosovo",
+        "name": "Republic of Kosovo",
+        "code": "XK"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d40",
         "regex": "^(?=.*americ).*samoa",
         "name": "Territory of American Samoa",
         "code": "AS"
     },
     {
-        "_id": "5df6a2170975ff383f9af34c",
-        "regex": "greenland",
-        "name": "Greenland",
-        "code": "GL"
+        "_id": "5f1c56a8bf29657e0d4c1d41",
+        "regex": "barbados",
+        "name": "Barbados",
+        "code": "BB"
     },
     {
-        "_id": "5df6a2170975ff383f9af339",
-        "regex": "uzbek",
-        "name": "Republic of Uzbekistan",
-        "code": "UZ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af323",
-        "regex": "kitts|\\bnevis",
-        "name": "Federation of Saint Kitts and Nevis",
-        "code": "KN"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af344",
-        "regex": "central.?african.?rep.*",
-        "name": "Central African Republic",
-        "code": "CF"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af33e",
-        "regex": "guernsey",
-        "name": "Guernsey",
-        "code": "GG"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af351",
-        "regex": ".*italy|.*italia.*",
-        "name": "Italy",
-        "code": "IT"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af328",
-        "regex": "myanmar|burma",
-        "name": "Republic of the Union of Myanmar",
-        "code": "MM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af349",
-        "regex": "spain",
-        "name": "Kingdom of Spain",
-        "code": "ES"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af343",
-        "regex": "botswana|bechuana",
-        "name": "Republic of Botswana",
-        "code": "BW"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af356",
-        "regex": "libya",
-        "name": "Libya",
-        "code": "LY"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af32d",
-        "regex": "(new|n)?.? *zealand",
-        "name": "New Zealand",
-        "code": "NZ"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af34e",
-        "regex": "guyana|british.?guiana",
-        "name": "Co-operative Republic of Guyana",
-        "code": "GY"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af348",
-        "regex": "ecuador",
-        "name": "Republic of Ecuador",
-        "code": "EC"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af35b",
-        "regex": "\\bniger(?!ia)",
-        "name": "Republic of the Niger",
-        "code": "NE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af332",
-        "regex": "singapore",
-        "name": "Republic of Singapore",
-        "code": "SG"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af34d",
-        "regex": "greece|hellenic|hellas",
-        "name": "Hellenic Republic",
-        "code": "GR"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af360",
-        "regex": "reunion|r\u00e9union",
-        "name": "R\u00e9union",
-        "code": "RE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af353",
-        "regex": "^(?=.*dem).*\\bkorea|^(?=.*peo).*\\bkorea|^(?=.*nor).*\\bkorea|\\bd\\.?p\\.?r\\.?k",
-        "name": "Democratic People\u2019s Republic of Korea",
-        "code": "KP"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af337",
-        "regex": "turkey",
-        "name": "Republic of Turkey",
-        "code": "TR"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af352",
-        "regex": "kyrgyz|kirghiz",
-        "name": "Kyrgyz Republic",
-        "code": "KG"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af365",
-        "regex": "french.?southern|\\bfr.*\\bso.*\\ban.*\\b\\bt",
-        "name": "French Southern and Antarctic Lands",
-        "code": "TF"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af358",
-        "regex": "mongolia",
-        "name": "Mongolia",
-        "code": "MN"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af33c",
-        "regex": "zimbabwe|^(?!.*northern).*rhodesia",
-        "name": "Republic of Zimbabwe",
-        "code": "ZW"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af357",
-        "regex": "marshall",
-        "name": "Republic of the Marshall Islands",
-        "code": "MH"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af36a",
-        "regex": "^((?!n|s|.*republic)|(?=.*socialist)).*viet.?nam(?! *,? *n| *,? *s)",
-        "name": "Socialist Republic of Vietnam",
-        "code": "VN"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af35d",
-        "regex": "\\boman|trucial",
-        "name": "Sultanate of Oman",
-        "code": "OM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af341",
+        "_id": "5f1c56a8bf29657e0d4c1d42",
         "regex": "bahrain",
         "name": "Kingdom of Bahrain",
         "code": "BH"
     },
     {
-        "_id": "5df6a2170975ff383f9af35c",
-        "regex": "norway",
-        "name": "Kingdom of Norway",
-        "code": "NO"
+        "_id": "5f1c56a8bf29657e0d4c1d43",
+        "regex": "bolivia",
+        "name": "Plurinational State of Bolivia",
+        "code": "BO"
     },
     {
-        "_id": "5df6a2170975ff383f9af346",
+        "_id": "5f1c56a8bf29657e0d4c1d44",
+        "regex": "botswana|bechuana",
+        "name": "Republic of Botswana",
+        "code": "BW"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d45",
+        "regex": "central.?african.?rep.*",
+        "name": "Central African Republic",
+        "code": "CF"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d46",
+        "regex": "cameroon",
+        "name": "Republic of Cameroon",
+        "code": "CM"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d47",
         "regex": "(cabo|cape) *verde",
         "name": "Republic of Cape Verde",
         "code": "CV"
     },
     {
-        "_id": "5df6a2170975ff383f9af361",
-        "regex": "solomon",
-        "name": "Solomon Islands",
-        "code": "SB"
+        "_id": "5f1c56a8bf29657e0d4c1d48",
+        "regex": "djibouti",
+        "name": "Republic of Djibouti",
+        "code": "DJ"
     },
     {
-        "_id": "5df6a2170975ff383f9af362",
-        "regex": "helena",
-        "name": "Saint Helena, Ascension and Tristan da Cunha",
-        "code": "SH"
+        "_id": "5f1c56a8bf29657e0d4c1d49",
+        "regex": "ecuador",
+        "name": "Republic of Ecuador",
+        "code": "EC"
     },
     {
-        "_id": "5df6a2170975ff383f9af34b",
+        "_id": "5f1c56a8bf29657e0d4c1d4a",
+        "regex": "spain",
+        "name": "Kingdom of Spain",
+        "code": "ES"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d4b",
+        "regex": "micronesia",
+        "name": "Federated States of Micronesia",
+        "code": "FM"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d4c",
         "regex": "grenada",
         "name": "Grenada",
         "code": "GD"
     },
     {
-        "_id": "5df6a2170975ff383f9af367",
-        "regex": "trinidad|tobago",
-        "name": "Republic of Trinidad and Tobago",
-        "code": "TT"
+        "_id": "5f1c56a8bf29657e0d4c1d4d",
+        "regex": "greenland",
+        "name": "Greenland",
+        "code": "GL"
     },
     {
-        "_id": "5df6a2170975ff383f9af366",
-        "regex": "turk-?men",
-        "name": "Turkmenistan",
-        "code": "TM"
+        "_id": "5f1c56a8bf29657e0d4c1d4e",
+        "regex": "greece|hellenic|hellas",
+        "name": "Hellenic Republic",
+        "code": "GR"
     },
     {
-        "_id": "5df6a2170975ff383f9af36c",
-        "regex": "^(?!.*monte).*serbia.*",
-        "name": "Republic of Serbia",
-        "code": "RS"
+        "_id": "5f1c56a8bf29657e0d4c1d4f",
+        "regex": "guyana|british.?guiana",
+        "name": "Co-operative Republic of Guyana",
+        "code": "GY"
     },
     {
-        "_id": "5df6a2170975ff383f9af350",
+        "_id": "5f1c56a8bf29657e0d4c1d50",
+        "regex": "(ha(i|\\xef|\\xc3\\xaf)ti)",
+        "name": "Republic of Haiti",
+        "code": "HT"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d51",
         "regex": "india(?!.*ocea)",
         "name": "Republic of India",
         "code": "IN"
     },
     {
-        "_id": "5df6a2170975ff383f9af36b",
-        "regex": "mayotte",
-        "name": "Department of Mayotte",
-        "code": "YT"
+        "_id": "5f1c56a8bf29657e0d4c1d52",
+        "regex": ".*italy|.*italia.*",
+        "name": "Italy",
+        "code": "IT"
     },
     {
-        "_id": "5df6a2170975ff383f9af355",
+        "_id": "5f1c56a8bf29657e0d4c1d53",
+        "regex": "kyrgyz|kirghiz",
+        "name": "Kyrgyz Republic",
+        "code": "KG"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d54",
+        "regex": "^(?=.*dem).*\\bkorea|^(?=.*peo).*\\bkorea|^(?=.*nor).*\\bkorea|\\bd\\.?p\\.?r\\.?k",
+        "name": "Democratic People’s Republic of Korea",
+        "code": "KP"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d55",
+        "regex": "\\blaos?\\b",
+        "name": "Lao People’s Democratic Republic",
+        "code": "LA"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d56",
         "regex": "liberia",
         "name": "Republic of Liberia",
         "code": "LR"
     },
     {
-        "_id": "5df6a2170975ff383f9af35a",
+        "_id": "5f1c56a8bf29657e0d4c1d57",
+        "regex": "libya",
+        "name": "Libya",
+        "code": "LY"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d58",
+        "regex": "marshall",
+        "name": "Republic of the Marshall Islands",
+        "code": "MH"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d59",
+        "regex": "mongolia",
+        "name": "Mongolia",
+        "code": "MN"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d5a",
+        "regex": "montserrat",
+        "name": "Montserrat",
+        "code": "MS"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d5b",
         "regex": "\\bmexic",
         "name": "United Mexican States",
         "code": "MX"
     },
     {
-        "_id": "5df6a2170975ff383f9af35f",
+        "_id": "5f1c56a8bf29657e0d4c1d5c",
+        "regex": "\\bniger(?!ia)",
+        "name": "Republic of the Niger",
+        "code": "NE"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d5d",
+        "regex": "norway",
+        "name": "Kingdom of Norway",
+        "code": "NO"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d5e",
+        "regex": "\\boman|trucial",
+        "name": "Sultanate of Oman",
+        "code": "OM"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d5f",
+        "regex": "philippines",
+        "name": "Republic of the Philippines",
+        "code": "PH"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d60",
         "regex": "puerto.?rico",
         "name": "Puerto Rico",
         "code": "PR"
     },
     {
-        "_id": "5df6a2170975ff383f9af364",
+        "_id": "5f1c56a8bf29657e0d4c1d61",
+        "regex": "reunion|réunion",
+        "name": "Réunion",
+        "code": "RE"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d62",
+        "regex": "solomon",
+        "name": "Solomon Islands",
+        "code": "SB"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d63",
+        "regex": "helena",
+        "name": "Saint Helena, Ascension and Tristan da Cunha",
+        "code": "SH"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d64",
+        "regex": "san.?marino",
+        "name": "Republic of San Marino",
+        "code": "SM"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d65",
         "regex": "el.?salvador",
         "name": "Republic of El Salvador",
         "code": "SV"
     },
     {
-        "_id": "5df6a2170975ff383f9af369",
+        "_id": "5f1c56a8bf29657e0d4c1d66",
+        "regex": "french.?southern|\\bfr.*\\bso.*\\ban.*\\b\\bt",
+        "name": "French Southern and Antarctic Lands",
+        "code": "TF"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d67",
+        "regex": "turk-?men",
+        "name": "Turkmenistan",
+        "code": "TM"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d68",
+        "regex": "trinidad|tobago",
+        "name": "Republic of Trinidad and Tobago",
+        "code": "TT"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d69",
+        "regex": "uganda",
+        "name": "Republic of Uganda",
+        "code": "UG"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d6a",
         "regex": "holy.?see|vatican|papal.?st",
         "name": "Vatican City State",
         "code": "VA"
     },
     {
-        "_id": "5df6a2170975ff383f9af36e",
+        "_id": "5f1c56a8bf29657e0d4c1d6b",
+        "regex": "^((?!n|s|.*republic)|(?=.*socialist)).*viet.?nam(?! *,? *n| *,? *s)",
+        "name": "Socialist Republic of Vietnam",
+        "code": "VN"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d6c",
+        "regex": "mayotte",
+        "name": "Department of Mayotte",
+        "code": "YT"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d6d",
+        "regex": "^(?!.*monte).*serbia.*",
+        "name": "Republic of Serbia",
+        "code": "RS"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d6e",
+        "regex": "^(?!.*martin)(?!.*saba).*maarten|dutch.*martin|martin.*dutch",
+        "name": "Sint Maarten",
+        "code": "SX"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d6f",
         "regex": "barth|barts",
-        "name": "Collectivity of Saint-Barth\u00e9lemy",
+        "name": "Collectivity of Saint-Barthélemy",
         "code": "BL"
     },
     {
-        "_id": "5df6a2170975ff383f9af36f",
+        "_id": "5f1c56a8bf29657e0d4c1d70",
+        "regex": "austria",
+        "name": "Republic of Austria",
+        "code": "AT"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d71",
+        "regex": "herzegovina|bosnia",
+        "name": "Bosnia and Herzegovina",
+        "code": "BA"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d72",
+        "regex": "bulgaria",
+        "name": "Republic of Bulgaria",
+        "code": "BG"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d73",
+        "regex": "brunei",
+        "name": "Nation of Brunei, the Abode of Peace",
+        "code": "BN"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d74",
+        "regex": "bouvet",
+        "name": "Bouvet Island",
+        "code": "BV"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d75",
+        "regex": "\\bcocos|keeling",
+        "name": "Territory of the Cocos (Keeling) Islands",
+        "code": "CC"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d76",
+        "regex": "\\bchile",
+        "name": "Republic of Chile",
+        "code": "CL"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d77",
+        "regex": "\\bcuba",
+        "name": "Republic of Cuba",
+        "code": "CU"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d78",
+        "regex": "^(?!e|w)(fed)?.*germany(?!,? *e|,? *w)(,? *)(\\bfed)?",
+        "name": "Federal Republic of Germany",
+        "code": "DE"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d79",
+        "regex": "algeria",
+        "name": "People's Democratic Republic of Algeria",
+        "code": "DZ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d7a",
+        "regex": "eritrea",
+        "name": "State of Eritrea",
+        "code": "ER"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d7b",
+        "regex": "falkland|malvinas",
+        "name": "Falkland Islands (Islas Malvinas)",
+        "code": "FK"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d7c",
+        "regex": "gabon",
+        "name": "Gabonese Republic",
+        "code": "GA"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d7d",
+        "regex": "gibraltar",
+        "name": "Gibraltar",
+        "code": "GI"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d7e",
+        "regex": "guine.*eq|eq.*guine|^(?=.*span).*guinea",
+        "name": "Republic of Equatorial Guinea",
+        "code": "GQ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d7f",
+        "regex": "^(.*portu).*guinea|guinea.*bissau",
+        "name": "Republic of Guinea-Bissau",
+        "code": "GW"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d80",
+        "regex": "croatia|hrvatska",
+        "name": "Republic of Croatia",
+        "code": "HR"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d81",
+        "regex": "israel",
+        "name": "State of Israel",
+        "code": "IL"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d82",
+        "regex": "iceland",
+        "name": "Iceland",
+        "code": "IS"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d83",
+        "regex": "kenya|british.?east.?africa|east.?africa.?prot",
+        "name": "Republic of Kenya",
+        "code": "KE"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d84",
+        "regex": "kitts|\\bnevis",
+        "name": "Federation of Saint Kitts and Nevis",
+        "code": "KN"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d85",
+        "regex": "kazak",
+        "name": "Republic of Kazakhstan",
+        "code": "KZ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d86",
+        "regex": "sri.?lanka|ceylon",
+        "name": "Democratic Socialist Republic of Sri Lanka",
+        "code": "LK"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d87",
+        "regex": "latvia",
+        "name": "Republic of Latvia",
+        "code": "LV"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d88",
+        "regex": "madagascar|malagasy",
+        "name": "Republic of Madagascar",
+        "code": "MG"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d89",
+        "regex": "myanmar|burma",
+        "name": "Republic of the Union of Myanmar",
+        "code": "MM"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d8a",
+        "regex": "mauritania",
+        "name": "Islamic Republic of Mauritania",
+        "code": "MR"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d8b",
+        "regex": "malawi|nyasa",
+        "name": "Republic of Malawi",
+        "code": "MW"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d8c",
+        "regex": "new.?caledonia",
+        "name": "New Caledonia",
+        "code": "NC"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d8d",
+        "regex": "^(?!.*\\bant)(?!.*\\bcarib).*netherlands",
+        "name": "Netherlands",
+        "code": "NL"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d8e",
+        "regex": "(new|n)?.? *zealand",
+        "name": "New Zealand",
+        "code": "NZ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d8f",
+        "regex": "papua|\\bp.*\\bn.*\\bguin.*|^p\\.?n\\.?g\\.?$|new.?guinea",
+        "name": "Independent State of Papua New Guinea",
+        "code": "PG"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d90",
+        "regex": "pitcairn",
+        "name": "Pitcairn, Henderson, Ducie and Oeno Islands",
+        "code": "PN"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d91",
+        "regex": "qatar",
+        "name": "State of Qatar",
+        "code": "QA"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d92",
+        "regex": "\\bsa\\w*.?arabia",
+        "name": "Kingdom of Saudi Arabia",
+        "code": "SA"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d93",
+        "regex": "singapore",
+        "name": "Republic of Singapore",
+        "code": "SG"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d94",
+        "regex": "sierra",
+        "name": "Republic of Sierra Leone",
+        "code": "SL"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d95",
+        "regex": "tome|tomÃ©",
+        "name": "Democratic Republic of São Tomé and Príncipe",
+        "code": "ST"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d96",
+        "regex": "\\bchad",
+        "name": "Republic of Chad",
+        "code": "TD"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d97",
+        "regex": "tokelau",
+        "name": "Tokelau",
+        "code": "TK"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d98",
+        "regex": "turkey",
+        "name": "Republic of Turkey",
+        "code": "TR"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d99",
+        "regex": "ukrain",
+        "name": "Ukraine",
+        "code": "UA"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d9a",
+        "regex": "uzbek",
+        "name": "Republic of Uzbekistan",
+        "code": "UZ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d9b",
+        "regex": "^(?=.*\\bu\\.?\\s?s).*virgin|^(?=.*states).*virgin",
+        "name": "U.S. Virgin Islands",
+        "code": "VI"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d9c",
+        "regex": "yemen",
+        "name": "Republic of Yemen",
+        "code": "YE"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d9d",
+        "regex": "zimbabwe|^(?!.*northern).*rhodesia",
+        "name": "Republic of Zimbabwe",
+        "code": "ZW"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d9e",
+        "regex": "\\bcura(c|ç)ao",
+        "name": "Curaçao",
+        "code": "CW"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1d9f",
+        "regex": "guernsey",
+        "name": "Guernsey",
+        "code": "GG"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1da0",
+        "regex": "australia",
+        "name": "Commonwealth of Australia",
+        "code": "AU"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1da1",
+        "regex": "azerbaijan",
+        "name": "Republic of Azerbaijan",
+        "code": "AZ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1da2",
+        "regex": "burkina|\\bfaso|upper.?volta",
+        "name": "Burkina Faso",
+        "code": "BF"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1da3",
+        "regex": "bermuda",
+        "name": "Bermuda",
+        "code": "BM"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1da4",
+        "regex": "bhutan",
+        "name": "Kingdom of Bhutan",
+        "code": "BT"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1da5",
+        "regex": "canada",
+        "name": "Canada",
+        "code": "CA"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1da6",
+        "regex": "\\bcook",
+        "name": "Cook Islands",
+        "code": "CK"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1da7",
+        "regex": "costa.?rica",
+        "name": "Republic of Costa Rica",
+        "code": "CR"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1da8",
+        "regex": "^(?=.*rep).*czech.*|czechia|bohemia|.*czech.*",
+        "name": "Czech Republic",
+        "code": "CZ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1da9",
+        "regex": "dominican",
+        "name": "Dominican Republic",
+        "code": "DO"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1daa",
+        "regex": "\\bw.*sahara",
+        "name": "Western Sahara",
+        "code": "EH"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1dab",
+        "regex": "fiji",
+        "name": "Republic of Fiji",
+        "code": "FJ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1dac",
+        "regex": ".*(ivoire|ivory)",
+        "name": "Republic of Côte d'Ivoire",
+        "code": "CI"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1dad",
+        "regex": "ghana|gold.?coast",
+        "name": "Republic of Ghana",
+        "code": "GH"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1dae",
+        "regex": "guadeloupe",
+        "name": "Guadeloupe",
+        "code": "GP"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1daf",
+        "regex": "\\bguam",
+        "name": "Territory of Guam",
+        "code": "GU"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1db0",
+        "regex": "^(?!.*brit).*honduras",
+        "name": "Republic of Honduras",
+        "code": "HN"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1db1",
+        "regex": "^(?!north.*)ireland",
+        "name": "Ireland",
+        "code": "IE"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1db2",
+        "regex": "\\biran|persia",
+        "name": "Islamic Republic of Iran",
+        "code": "IR"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1db3",
+        "regex": "japan",
+        "name": "Japan",
+        "code": "JP"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1db4",
+        "regex": "comoro",
+        "name": "Union of the Comoros",
+        "code": "KM"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1db5",
+        "regex": "cayman",
+        "name": "Cayman Islands",
+        "code": "KY"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1db6",
+        "regex": "liechtenstein",
+        "name": "Principality of Liechtenstein",
+        "code": "LI"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1db7",
+        "regex": "^(?!.*belg).*luxem",
+        "name": "Grand Duchy of Luxembourg",
+        "code": "LU"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1db8",
+        "regex": "moldov|b(a|e)ssarabia",
+        "name": "Republic of Moldova",
+        "code": "MD"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1db9",
+        "regex": "\\bmali\\b",
+        "name": "Republic of Mali",
+        "code": "ML"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1dba",
+        "regex": "martinique",
+        "name": "Martinique",
+        "code": "MQ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1dbb",
         "regex": "maldive",
         "name": "Republic of Maldives",
         "code": "MV"
     },
     {
-        "_id": "5df6a2170975ff383f9af372",
-        "regex": "niue",
-        "name": "Niue",
-        "code": "NU"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af377",
-        "regex": "swedish|sweden",
-        "name": "Kingdom of Sweden",
-        "code": "SE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af375",
-        "regex": "paraguay",
-        "name": "Republic of Paraguay",
-        "code": "PY"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af371",
-        "regex": "nicaragua",
-        "name": "Republic of Nicaragua",
-        "code": "NI"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af374",
-        "regex": "miquelon",
-        "name": "Overseas Collectivity of Saint Pierre and Miquelon",
-        "code": "PM"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af370",
+        "_id": "5f1c56a8bf29657e0d4c1dbc",
         "regex": "namibia",
         "name": "Republic of Namibia",
         "code": "NA"
     },
     {
-        "_id": "5df6a2170975ff383f9af376",
-        "regex": "rwanda",
-        "name": "Republic of Rwanda",
-        "code": "RW"
+        "_id": "5f1c56a8bf29657e0d4c1dbd",
+        "regex": "nicaragua",
+        "name": "Republic of Nicaragua",
+        "code": "NI"
     },
     {
-        "_id": "5df6a2170975ff383f9af373",
+        "_id": "5f1c56a8bf29657e0d4c1dbe",
+        "regex": "niue",
+        "name": "Niue",
+        "code": "NU"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1dbf",
         "regex": "french.?polynesia",
         "name": "French Polynesia",
         "code": "PF"
     },
     {
-        "_id": "5df6a2170975ff383f9af379",
-        "regex": "surinam|dutch.?guiana",
-        "name": "Republic of Suriname",
-        "code": "SR"
+        "_id": "5f1c56a8bf29657e0d4c1dc0",
+        "regex": "miquelon",
+        "name": "Overseas Collectivity of Saint Pierre and Miquelon",
+        "code": "PM"
     },
     {
-        "_id": "5df6a2180975ff383f9af37e",
-        "regex": "uruguay",
-        "name": "Oriental Republic of Uruguay",
-        "code": "UY"
+        "_id": "5f1c56a8bf29657e0d4c1dc1",
+        "regex": "paraguay",
+        "name": "Republic of Paraguay",
+        "code": "PY"
     },
     {
-        "_id": "5df6a2180975ff383f9af37c",
-        "regex": "^(?=.*leste).*timor|^(?=.*east).*timor",
-        "name": "Democratic Republic of Timor-Leste",
-        "code": "TL"
+        "_id": "5f1c56a8bf29657e0d4c1dc2",
+        "regex": "rwanda",
+        "name": "Republic of Rwanda",
+        "code": "RW"
     },
     {
-        "_id": "5df6a2180975ff383f9af37b",
-        "regex": "tajik",
-        "name": "Republic of Tajikistan",
-        "code": "TJ"
+        "_id": "5f1c56a8bf29657e0d4c1dc3",
+        "regex": "swedish|sweden",
+        "name": "Kingdom of Sweden",
+        "code": "SE"
     },
     {
-        "_id": "5df6a2180975ff383f9af381",
-        "regex": "\\bdem.*congo|congo.*\\bdem|congo.*\\bdr|\\bdr.*congo|\\bd\\.?r\\.?c|\\bd\\.?r\\.?o\\.?c|\\br\\.?d\\.?c|belgian.?congo|congo.?free.?state|kinshasa|zaire|l\\w{1,2}opoldville|^the\\ congo$|^RDC$|^DROC$",
-        "name": "Democratic Republic of the Congo",
-        "code": "CD"
-    },
-    {
-        "_id": "5df6a2180975ff383f9af383",
-        "regex": "jersey",
-        "name": "Bailiwick of Jersey",
-        "code": "JE"
-    },
-    {
-        "_id": "5df6a2170975ff383f9af378",
+        "_id": "5f1c56a8bf29657e0d4c1dc4",
         "regex": "^(?!.*cze).*slovak",
         "name": "Slovak Republic",
         "code": "SK"
     },
     {
-        "_id": "5df6a2180975ff383f9af37d",
-        "regex": "tanzania(?!: zan.*)",
-        "name": "United Republic of Tanzania",
-        "code": "TZ"
+        "_id": "5f1c56a8bf29657e0d4c1dc5",
+        "regex": "surinam|dutch.?guiana",
+        "name": "Republic of Suriname",
+        "code": "SR"
     },
     {
-        "_id": "5df6a2170975ff383f9af37a",
+        "_id": "5f1c56a8bf29657e0d4c1dc6",
         "regex": "turks",
         "name": "Turks and Caicos Islands",
         "code": "TC"
     },
     {
-        "_id": "5df6a2180975ff383f9af380",
-        "regex": "^(?!.*amer.*)samoa|(\\bindep.*samoa)",
-        "name": "Independent State of Samoa",
-        "code": "WS"
+        "_id": "5f1c56a8bf29657e0d4c1dc7",
+        "regex": "tajik",
+        "name": "Republic of Tajikistan",
+        "code": "TJ"
     },
     {
-        "_id": "5df6a2180975ff383f9af382",
-        "regex": "^(?!.*serbia).*montenegro",
-        "name": "Montenegro",
-        "code": "ME"
+        "_id": "5f1c56a8bf29657e0d4c1dc8",
+        "regex": "^(?=.*leste).*timor|^(?=.*east).*timor",
+        "name": "Democratic Republic of Timor-Leste",
+        "code": "TL"
     },
     {
-        "_id": "5df6a2180975ff383f9af37f",
+        "_id": "5f1c56a8bf29657e0d4c1dc9",
+        "regex": "tanzania(?!: zan.*)",
+        "name": "United Republic of Tanzania",
+        "code": "TZ"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1dca",
+        "regex": "uruguay",
+        "name": "Oriental Republic of Uruguay",
+        "code": "UY"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1dcb",
         "regex": "^(?=.*\\bu\\.?\\s?k).*virgin|^(?=.*br.*).*virgin|^(?=.*kingdom).*virgin|BVI",
         "name": "British Virgin Islands",
         "code": "VG"
     },
     {
-        "_id": "5df6a2170975ff383f9af309",
-        "regex": "venezuela",
-        "name": "Bolivarian Republic of Venezuela",
-        "code": "VE"
+        "_id": "5f1c56a8bf29657e0d4c1dcc",
+        "regex": "^(?!.*amer.*)samoa|(\\bindep.*samoa)",
+        "name": "Independent State of Samoa",
+        "code": "WS"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1dcd",
+        "regex": "\\bdem.*congo|congo.*\\bdem|congo.*\\bdr|\\bdr.*congo|\\bd\\.?r\\.?c|\\bd\\.?r\\.?o\\.?c|\\br\\.?d\\.?c|belgian.?congo|congo.?free.?state|kinshasa|zaire|l\\w{1,2}opoldville|^the\\ congo$|^RDC$|^DROC$",
+        "name": "Democratic Republic of the Congo",
+        "code": "CD"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1dce",
+        "regex": "^(?!.*serbia).*montenegro",
+        "name": "Montenegro",
+        "code": "ME"
+    },
+    {
+        "_id": "5f1c56a8bf29657e0d4c1dcf",
+        "regex": "jersey",
+        "name": "Bailiwick of Jersey",
+        "code": "JE"
     }
 ]
